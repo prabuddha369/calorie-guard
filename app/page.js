@@ -274,15 +274,17 @@ export default function Home() {
           <div className='w-screen flex justify-center'>
             <Image src="/down.gif" height={60} width={60} className='me-40' />
           </div>
-          <div className='text-black w-[80%] ms-10 mt-5 flex flex-row justify-between items-center border rounded-xl'>
-            <div className='ms-10 bg-orange-700 text-white p-5'>DONATE NOW</div>
-            <div className='felx flex-col me-5 py-5'>
-            <img width="44" height="44" src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-early-bird-cyber-monday-flaticons-flat-flat-icons.png" alt="external-early-bird-cyber-monday-flaticons-flat-flat-icons" />
-            <p>Support Us</p>
+          <div className='relative'>
+            <div className='absolute top-0 text-black w-[80%] bg-white ms-10 mt-5 flex flex-row justify-between items-center border rounded-xl'>
+              <div className='ms-10 bg-orange-700 text-white p-5'>DONATE NOW</div>
+              <div className='felx flex-col me-5 py-5'>
+                <img width="44" height="44" src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-early-bird-cyber-monday-flaticons-flat-flat-icons.png" alt="external-early-bird-cyber-monday-flaticons-flat-flat-icons" />
+                <p>Support Us</p>
+              </div>
             </div>
           </div>
           <div className='relative px-5'>
-          <section className="absolute top-0 mt-10 p-10 w-[90%] mt-40 mb-20 rounded-xl text-black" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', background: 'linear-gradient(to bottom, transparent, skyblue)' }}>
+            <section className="absolute top-0 mt-10 p-10 w-[90%] mt-40 mb-20 rounded-xl text-black" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', background: 'linear-gradient(to bottom, transparent, skyblue)' }}>
               <h2 className="text-2xl font-bold mb-5">Calculate Your Maintenance Calorie</h2>
               <div className="flex flex-col">
                 <label htmlFor="age" className="mb-2">Age:</label>
@@ -326,7 +328,7 @@ export default function Home() {
 
         <style jsx>{`
   .scrollable-container {
-    height: 90vh; /* Set the maximum height as needed */
+    height: 100vh; /* Set the maximum height as needed */
     overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
   }
 
