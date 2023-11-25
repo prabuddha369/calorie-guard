@@ -120,7 +120,7 @@ export default function Home() {
           <div className='w-screen flex justify-center'>
             <Image src="/down.gif" height={60} width={60} className='me-40' />
           </div>
-          <section className="calorie-section mt-10 p-10 w-[50%] ms-40 mt-40 mb-20 rounded-xl text-black" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
+          <section className="calorie-section mt-10 p-10 w-[50%] ms-40 mt-40 mb-20 rounded-xl text-black" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', background: 'linear-gradient(to bottom, transparent, skyblue)' }}>
             <h2 className="text-2xl font-bold mb-5">Calculate Your Maintenance Calorie</h2>
             <div className="flex flex-col">
               <label htmlFor="age" className="mb-2">Age:</label>
@@ -137,21 +137,21 @@ export default function Home() {
               <div className="flex mb-4">
                 <div
                   className="gender-option"
-                  style={{ background: gender === 'male' ? 'blue' : 'white' }}
+                  style={{ background: gender === 'male' ? 'orange' : 'white' }}
                   onClick={() => setGender('male')}
                 >
                   Male
                 </div>
                 <div
                   className="gender-option"
-                  style={{ background: gender === 'female' ? 'blue' : 'white' }}
+                  style={{ background: gender === 'female' ? 'orange' : 'white' }}
                   onClick={() => setGender('female')}
                 >
                   Female
                 </div>
               </div>
 
-              <button className="bg-blue-500 text-white py-2 px-4 rounded">Calculate</button>
+              <button className="bg-orange-700 text-white py-2 px-4 rounded">Calculate</button>
             </div>
 
             {/* Display the calculated value */}
