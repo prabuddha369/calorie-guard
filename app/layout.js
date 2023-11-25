@@ -5,7 +5,7 @@ const actor = Actor({ subsets: ['latin'], weight:['400']})
 
 export const metadata = {
   title: 'Calorie Guard',
-  description: 'The Easiest way to count calorie',
+  description: 'The dream that everyone seeks. A life without medicine. We provide the easiest way to stay healthy and fit without sacrificing daily enjoyment.',
   icons: {
     icon: "/favicon.ico",
     apple: "/favicon.ico",
