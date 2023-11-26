@@ -486,7 +486,7 @@ export default function Home() {
                 <strong>Maintenance Calorie :</strong> {calculatedValue}<strong> cals</strong>
               </div>
             </section>
-            <div className='absolute top-[90vh]'>
+            <div className='absolute top-[120vh]'>
               <h1 className='text-black text-5xl font-bold mb-10'>What we Promise?</h1>
               <div className='text-black flex flex-row items-center'>
                 <Image src="/resturant.png" height={300} width={260} alt='App View' />
