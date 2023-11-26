@@ -267,7 +267,6 @@ export default function Home() {
               <strong>Maintenance Calorie :</strong> {calculatedValue}<strong> cals</strong>
             </div>
           </section>
-          <iframe src="https://www.figma.com/proto/FGekHHIrlAKAJyrYdMAyDo/Untitled?type=design&node-id=3-2&t=HXhmOpNqbl3TL8q6-1&scaling=scale-down&page-id=0%3A1&mode=design" width="800" height="600" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <style jsx>{`
