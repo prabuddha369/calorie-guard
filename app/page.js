@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { ImQuotesLeft } from "react-icons/im";
 import { ImQuotesRight } from "react-icons/im";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Home() {
   const [animationClass, setAnimationClass] = useState('');
@@ -444,7 +445,7 @@ export default function Home() {
             </div>
           </div>
           <div className='relative px-5'>
-            <section className="absolute top-0 mt-10 p-10 w-[90%] mt-40 mb-20 rounded-xl text-black bg-[#03dffc80]" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)'}}>
+            <section className="absolute top-0 mt-10 p-10 w-[90%] mt-40 mb-20 rounded-xl text-black bg-[#03dffc80]" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
               <h2 className="text-2xl font-bold mb-5">Calculate Your Maintenance Calorie</h2>
               <div className="flex flex-col">
                 <label htmlFor="age" className="mb-2">Age:</label>
@@ -486,8 +487,9 @@ export default function Home() {
                 <button className="bg-orange-700 text-white py-2 px-4 rounded">Calculate</button>
               </div>
 
-              <div className="mt-4">
-                <strong>Maintenance Calorie :</strong> {calculatedValue}<strong> cals</strong>
+              <div className="mt-4 text-3xl text-center mt-10">
+                <strong>Maintenance Calories<br /></strong> {calculatedValue}<strong> cals</strong>
+                <a className='flex flex-row justify-center h-fit items-center text-blue-700 text-[15px]' href='https://www.google.com/search?q=what+is+maintenance+calories&sca_esv=585419522&rlz=1C1JZAP_enIN870IN870&sxsrf=AM9HkKk_T3MplQdJwjFuAjxPjbRLaSwk7w%3A1701007787177&ei=q1FjZaqnCoWm2roPgJ2HsAU&ved=0ahUKEwjqqKjn6-GCAxUFk1YBHYDOAVYQ4dUDCBA&uact=5&oq=what+is+maintenance+calories&gs_lp=Egxnd3Mtd2l6LXNlcnAiHHdoYXQgaXMgbWFpbnRlbmFuY2UgY2Fsb3JpZXMyChAjGIAEGIoFGCcyBhAAGAcYHjILEAAYgAQYigUYkQIyCxAAGIAEGIoFGJECMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeSI0MUIMDWPwJcAB4ApABAJgB8AGgAdUMqgEFMC42LjK4AQPIAQD4AQHCAgQQABhH4gMEGAAgQeIDBRIBMSBAiAYBkAYI&sclient=gws-wiz-serp'><strong><br/>Know more about Maintenance Calorie</strong><FaExternalLinkAlt className='mt-8 ms-2' size={15}/></a>
               </div>
             </section>
             <div className='absolute top-[120vh]'>
