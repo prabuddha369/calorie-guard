@@ -267,6 +267,11 @@ export default function Home() {
               <strong>Maintenance Calorie :</strong> {calculatedValue}<strong> cals</strong>
             </div>
           </section>
+          <h1 className='text-black text-5xl font-bold ms-32 mb-10'>What we Promise?</h1>
+          <div className='text-black flex flex-row items-center'>
+            <Image src="/resturant.png" height={300} width={260} alt='App View' className='ms-32' />
+            <h2 className='text-3xl ms-10 font-bold'>All your Local Resturant's<br /><br />Food Calorie Data<br /><br />at Your Finger Tips<br /><br /><strong className='text-xl'>Comming soon....</strong></h2>
+          </div>
         </div>
 
         <style jsx>{`
@@ -481,8 +486,16 @@ export default function Home() {
                 <strong>Maintenance Calorie :</strong> {calculatedValue}<strong> cals</strong>
               </div>
             </section>
+            <div className='absolute top-[90vh]'>
+              <h1 className='text-black text-5xl font-bold mb-10'>What we Promise?</h1>
+              <div className='text-black flex flex-row items-center'>
+                <Image src="/resturant.png" height={300} width={260} alt='App View' />
+                <h2 className='text-2xl font-bold ms-5'>All your Local Resturant's<br />Food Calorie <br />Data at Your Finger Tips<br /><br /><strong className='text-xl'>Comming soon....</strong></h2>
+              </div>
+            </div>
           </div>
         </div>
+
 
         <style jsx>{`
   .scrollable-container {
