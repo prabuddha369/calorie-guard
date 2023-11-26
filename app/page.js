@@ -272,6 +272,10 @@ export default function Home() {
             <Image src="/resturant.png" height={300} width={260} alt='App View' className='ms-32' />
             <h2 className='text-3xl ms-10 font-bold'>All your Local Resturant's<br /><br />Food Calorie Data<br /><br />at Your Finger Tips<br /><br /><strong className='text-xl'>Comming soon....</strong></h2>
           </div>
+          <div className='text-black flex flex-row items-center mt-10'>
+            <h2 className='ms-32 text-3xl ms-10 font-bold me-5'>Scan your Foods<br /><br />and get Caloriefic Data<br /><br />at Your Finger Tips<br /><br /><strong className='text-xl'>Comming soon....</strong></h2>
+            <Image src="/lens.png" height={300} width={260} alt='App View' />
+          </div>
         </div>
 
         <style jsx>{`
@@ -440,7 +444,7 @@ export default function Home() {
             </div>
           </div>
           <div className='relative px-5'>
-            <section className="absolute top-0 mt-10 p-10 w-[90%] mt-40 mb-20 rounded-xl text-black" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', background: 'linear-gradient(to bottom, transparent, skyblue)' }}>
+            <section className="absolute top-0 mt-10 p-10 w-[90%] mt-40 mb-20 rounded-xl text-black bg-[#03dffc80]" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)'}}>
               <h2 className="text-2xl font-bold mb-5">Calculate Your Maintenance Calorie</h2>
               <div className="flex flex-col">
                 <label htmlFor="age" className="mb-2">Age:</label>
@@ -487,10 +491,14 @@ export default function Home() {
               </div>
             </section>
             <div className='absolute top-[120vh]'>
-              <h1 className='text-black text-5xl font-bold mb-10'>What we Promise?</h1>
-              <div className='text-black flex flex-row items-center'>
+              <h1 className='text-black text-5xl font-bold pb-10'>What we Promise?</h1>
+              <div className='text-black flex flex-row items-center bg-[#FFFFFF90] rounded-t-3xl'>
                 <Image src="/resturant.png" height={300} width={260} alt='App View' />
                 <h2 className='text-2xl font-bold ms-5'>All your Local Resturant's<br />Food Calorie <br />Data at Your Finger Tips<br /><br /><strong className='text-xl'>Comming soon....</strong></h2>
+              </div>
+              <div className='text-black flex flex-row items-center mt-10'>
+                <h2 className='text-2xl ms-10 font-bold me-5'>Scan your Foods<br />and get Caloriefic Data<br />at Your Finger Tips<br /><strong className='text-xl'>Comming soon....</strong></h2>
+                <Image src="/lens.png" height={300} width={260} alt='App View' />
               </div>
             </div>
           </div>
