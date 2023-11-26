@@ -355,19 +355,19 @@ export default function Home() {
       <main className="h-full w-screen bg-cover bg-center bg-white overflow-hidden relative">
         <div className='flex flex-row w-screen h-fit justify-start items-center' style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)' }}>
           <div
-            className={`logo-container ${animationClass} m-5 w-[50%] flex text-black flex-row items-center`}
+            className={`logo-container ${animationClass} m-5 w-[70%] flex text-black flex-row items-center`}
             style={{
               overflow: 'hidden',
               animation: 'glide 1s forwards',
             }}
           >
             <Image src="/logo.png" alt="logo" width={50} height={50} />
-            <div className='text-black ms-5 text-xl font-bold'>
+            <div className='text-black ms-5 w-full text-xl font-bold'>
               <Typewriter text="Calorie Guard" delay={200} />
             </div>
           </div>
 
-          <div className='ms-10'>
+          <div className='me-5'>
             <Image src="/playstore.png" height={5} width={100} />
           </div>
         </div>
