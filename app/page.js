@@ -516,17 +516,17 @@ export default function Home() {
 
                 <div className="mySlides fade">
                   <div className="text">Stay Healthy</div>
-                  <img className='ms-40' width="48" height="48" src="https://img.icons8.com/color/48/heart-with-pulse.png" alt="heart-with-pulse"/>
+                  <img className='ms-20' width="48" height="48" src="https://img.icons8.com/color/48/heart-with-pulse.png" alt="heart-with-pulse"/>
                 </div>
 
                 <div className="mySlides fade">
                   <div className="text">Our Tech</div>
-                  <img className='ms-40' width="48" height="48" src="https://img.icons8.com/stickers/100/technology.png" alt="technology"/>
+                  <img className='ms-20' width="48" height="48" src="https://img.icons8.com/stickers/100/technology.png" alt="technology"/>
                 </div>
 
                 <div className="mySlides fade">
                   <div className="text">Our Trust</div>
-                  <img className='ms-40' width="48" height="48" src="https://img.icons8.com/color/48/trust--v1.png" alt="trust--v1"/>
+                  <img className='ms-20' width="48" height="48" src="https://img.icons8.com/color/48/trust--v1.png" alt="trust--v1"/>
                 </div>
 
                 <a className="prev" onClick={() => plusSlides(-1)}>
@@ -593,7 +593,7 @@ export default function Home() {
                 <a className='flex flex-row justify-center h-fit items-center text-blue-700 text-[10px]' href='https://www.google.com/search?q=what+is+maintenance+calories&sca_esv=585419522&rlz=1C1JZAP_enIN870IN870&sxsrf=AM9HkKk_T3MplQdJwjFuAjxPjbRLaSwk7w%3A1701007787177&ei=q1FjZaqnCoWm2roPgJ2HsAU&ved=0ahUKEwjqqKjn6-GCAxUFk1YBHYDOAVYQ4dUDCBA&uact=5&oq=what+is+maintenance+calories&gs_lp=Egxnd3Mtd2l6LXNlcnAiHHdoYXQgaXMgbWFpbnRlbmFuY2UgY2Fsb3JpZXMyChAjGIAEGIoFGCcyBhAAGAcYHjILEAAYgAQYigUYkQIyCxAAGIAEGIoFGJECMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeSI0MUIMDWPwJcAB4ApABAJgB8AGgAdUMqgEFMC42LjK4AQPIAQD4AQHCAgQQABhH4gMEGAAgQeIDBRIBMSBAiAYBkAYI&sclient=gws-wiz-serp'><strong><br />Know more about Maintenance Calorie</strong><FaExternalLinkAlt className='mt-8 ms-2' size={10} /></a>
               </div>
             </section>
-            <div className='absolute top-[160vh]'>
+            <div className='absolute top-[240vh]'>
               <h1 className='text-black text-5xl font-bold pb-10'>What we Promise?</h1>
               <div className='text-black flex flex-row items-center bg-[#FFFFFF90] rounded-t-3xl'>
                 <Image src="/resturant.png" height={300} width={260} alt='App View' />
