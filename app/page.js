@@ -264,8 +264,9 @@ export default function Home() {
               <button className="bg-orange-700 text-white py-2 px-4 rounded">Calculate</button>
             </div>
 
-            <div className="mt-4">
-              <strong>Maintenance Calorie :</strong> {calculatedValue}<strong> cals</strong>
+            <div className="mt-4 text-3xl text-center">
+              <strong>Maintenance Calories: </strong> {calculatedValue}<strong> cals</strong>
+              <a className='flex flex-row justify-center h-fit items-center text-blue-700 text-[15px]' href='https://www.google.com/search?q=what+is+maintenance+calories&sca_esv=585419522&rlz=1C1JZAP_enIN870IN870&sxsrf=AM9HkKk_T3MplQdJwjFuAjxPjbRLaSwk7w%3A1701007787177&ei=q1FjZaqnCoWm2roPgJ2HsAU&ved=0ahUKEwjqqKjn6-GCAxUFk1YBHYDOAVYQ4dUDCBA&uact=5&oq=what+is+maintenance+calories&gs_lp=Egxnd3Mtd2l6LXNlcnAiHHdoYXQgaXMgbWFpbnRlbmFuY2UgY2Fsb3JpZXMyChAjGIAEGIoFGCcyBhAAGAcYHjILEAAYgAQYigUYkQIyCxAAGIAEGIoFGJECMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeSI0MUIMDWPwJcAB4ApABAJgB8AGgAdUMqgEFMC42LjK4AQPIAQD4AQHCAgQQABhH4gMEGAAgQeIDBRIBMSBAiAYBkAYI&sclient=gws-wiz-serp'><strong><br />Know more about Maintenance Calorie</strong><FaExternalLinkAlt className='mt-8 ms-2' size={15} /></a>
             </div>
           </section>
           <h1 className='text-black text-5xl font-bold ms-32 mb-10'>What we Promise?</h1>
@@ -489,7 +490,7 @@ export default function Home() {
 
               <div className="mt-4 text-3xl text-center mt-10">
                 <strong>Maintenance Calories<br /></strong> {calculatedValue}<strong> cals</strong>
-                <a className='flex flex-row justify-center h-fit items-center text-blue-700 text-[15px]' href='https://www.google.com/search?q=what+is+maintenance+calories&sca_esv=585419522&rlz=1C1JZAP_enIN870IN870&sxsrf=AM9HkKk_T3MplQdJwjFuAjxPjbRLaSwk7w%3A1701007787177&ei=q1FjZaqnCoWm2roPgJ2HsAU&ved=0ahUKEwjqqKjn6-GCAxUFk1YBHYDOAVYQ4dUDCBA&uact=5&oq=what+is+maintenance+calories&gs_lp=Egxnd3Mtd2l6LXNlcnAiHHdoYXQgaXMgbWFpbnRlbmFuY2UgY2Fsb3JpZXMyChAjGIAEGIoFGCcyBhAAGAcYHjILEAAYgAQYigUYkQIyCxAAGIAEGIoFGJECMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeSI0MUIMDWPwJcAB4ApABAJgB8AGgAdUMqgEFMC42LjK4AQPIAQD4AQHCAgQQABhH4gMEGAAgQeIDBRIBMSBAiAYBkAYI&sclient=gws-wiz-serp'><strong><br/>Know more about Maintenance Calorie</strong><FaExternalLinkAlt className='mt-8 ms-2' size={15}/></a>
+                <a className='flex flex-row justify-center h-fit items-center text-blue-700 text-[15px]' href='https://www.google.com/search?q=what+is+maintenance+calories&sca_esv=585419522&rlz=1C1JZAP_enIN870IN870&sxsrf=AM9HkKk_T3MplQdJwjFuAjxPjbRLaSwk7w%3A1701007787177&ei=q1FjZaqnCoWm2roPgJ2HsAU&ved=0ahUKEwjqqKjn6-GCAxUFk1YBHYDOAVYQ4dUDCBA&uact=5&oq=what+is+maintenance+calories&gs_lp=Egxnd3Mtd2l6LXNlcnAiHHdoYXQgaXMgbWFpbnRlbmFuY2UgY2Fsb3JpZXMyChAjGIAEGIoFGCcyBhAAGAcYHjILEAAYgAQYigUYkQIyCxAAGIAEGIoFGJECMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeSI0MUIMDWPwJcAB4ApABAJgB8AGgAdUMqgEFMC42LjK4AQPIAQD4AQHCAgQQABhH4gMEGAAgQeIDBRIBMSBAiAYBkAYI&sclient=gws-wiz-serp'><strong><br />Know more about Maintenance Calorie</strong><FaExternalLinkAlt className='mt-8 ms-2' size={15} /></a>
               </div>
             </section>
             <div className='absolute top-[120vh]'>
