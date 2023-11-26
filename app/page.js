@@ -497,7 +497,7 @@ export default function Home() {
 
               <div className="mt-4 text-xl text-center mt-10">
                 <strong>Maintenance Calories<br /></strong> {calculatedValue}<strong> cals</strong>
-                <a className='flex flex-row justify-center h-fit items-center text-blue-700 text-[10px]' href='https://www.google.com/search?q=what+is+maintenance+calories&sca_esv=585419522&rlz=1C1JZAP_enIN870IN870&sxsrf=AM9HkKk_T3MplQdJwjFuAjxPjbRLaSwk7w%3A1701007787177&ei=q1FjZaqnCoWm2roPgJ2HsAU&ved=0ahUKEwjqqKjn6-GCAxUFk1YBHYDOAVYQ4dUDCBA&uact=5&oq=what+is+maintenance+calories&gs_lp=Egxnd3Mtd2l6LXNlcnAiHHdoYXQgaXMgbWFpbnRlbmFuY2UgY2Fsb3JpZXMyChAjGIAEGIoFGCcyBhAAGAcYHjILEAAYgAQYigUYkQIyCxAAGIAEGIoFGJECMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeSI0MUIMDWPwJcAB4ApABAJgB8AGgAdUMqgEFMC42LjK4AQPIAQD4AQHCAgQQABhH4gMEGAAgQeIDBRIBMSBAiAYBkAYI&sclient=gws-wiz-serp'><strong><br />Know more about Maintenance Calorie</strong><FaExternalLinkAlt className='mt-8 ms-2' size={15} /></a>
+                <a className='flex flex-row justify-center h-fit items-center text-blue-700 text-[10px]' href='https://www.google.com/search?q=what+is+maintenance+calories&sca_esv=585419522&rlz=1C1JZAP_enIN870IN870&sxsrf=AM9HkKk_T3MplQdJwjFuAjxPjbRLaSwk7w%3A1701007787177&ei=q1FjZaqnCoWm2roPgJ2HsAU&ved=0ahUKEwjqqKjn6-GCAxUFk1YBHYDOAVYQ4dUDCBA&uact=5&oq=what+is+maintenance+calories&gs_lp=Egxnd3Mtd2l6LXNlcnAiHHdoYXQgaXMgbWFpbnRlbmFuY2UgY2Fsb3JpZXMyChAjGIAEGIoFGCcyBhAAGAcYHjILEAAYgAQYigUYkQIyCxAAGIAEGIoFGJECMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeSI0MUIMDWPwJcAB4ApABAJgB8AGgAdUMqgEFMC42LjK4AQPIAQD4AQHCAgQQABhH4gMEGAAgQeIDBRIBMSBAiAYBkAYI&sclient=gws-wiz-serp'><strong><br />Know more about Maintenance Calorie</strong><FaExternalLinkAlt className='mt-8 ms-2' size={10} /></a>
               </div>
             </section>
             <div className='absolute top-[120vh]'>
@@ -510,8 +510,8 @@ export default function Home() {
                 <h2 className='text-2xl ms-10 font-bold me-5'>Scan your Foods<br />and get Caloriefic Data<br />at Your Finger Tips<br /><strong className='text-xl'>Comming soon....</strong></h2>
                 <Image src="/lens.png" height={300} width={260} alt='App View' />
               </div>
-              <div className='flex flex-row text-[10px] justify-between mt-20 mb-5 items-center w-full text-[#424242]'>
-                <p>Copyright © 2023 CalorieGuard Inc. All rights reserved.</p>
+              <div className='flex flex-row text-[10px] justify-between mt-20 mb-5 items-top w-full text-[#424242]'>
+                <p>Copyright © 2023 CalorieGuard Inc.<br/> All rights reserved.</p>
                 <div className='flex gap-5 pe-5'>
                   <a href=''>Contact Us</a>
                   <a href='https://sites.google.com/view/calorie-guard/home'>Privacy</a>
