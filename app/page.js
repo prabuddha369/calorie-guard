@@ -278,6 +278,13 @@ export default function Home() {
             <h2 className='ms-32 text-3xl ms-10 font-bold me-5'>Scan your Foods<br /><br />and get Caloriefic Data<br /><br />at Your Finger Tips<br /><br /><strong className='text-xl'>Comming soon....</strong></h2>
             <Image src="/lens.png" height={300} width={260} alt='App View' />
           </div>
+          <div className='flex flex-row justify-between mt-20 mb-5 px-10 items-center w-[80%] text-[#424242]'>
+            <p>Copyright © 2023 CalorieGuard Inc. All rights reserved.</p>
+            <div className='flex gap-5'>
+              <a href=''>Contact Us</a>
+              <a href='https://sites.google.com/view/calorie-guard/home'>Privacy</a>
+            </div>
+          </div>
         </div>
 
         <style jsx>{`
@@ -499,9 +506,16 @@ export default function Home() {
                 <Image src="/resturant.png" height={300} width={260} alt='App View' />
                 <h2 className='text-2xl font-bold ms-5'>All your Local Resturant's<br />Food Calorie <br />Data at Your Finger Tips<br /><br /><strong className='text-xl'>Comming soon....</strong></h2>
               </div>
-              <div className='text-black flex flex-row items-center mt-10 bg-[#FFFFFF90]'>
+              <div className='text-black flex flex-row items-center pt-10 bg-[#FFFFFF90]'>
                 <h2 className='text-2xl ms-10 font-bold me-5'>Scan your Foods<br />and get Caloriefic Data<br />at Your Finger Tips<br /><strong className='text-xl'>Comming soon....</strong></h2>
                 <Image src="/lens.png" height={300} width={260} alt='App View' />
+              </div>
+              <div className='flex flex-row text-[10px] justify-between mt-20 mb-5 items-center w-full text-[#424242]'>
+                <p>Copyright © 2023 CalorieGuard Inc. All rights reserved.</p>
+                <div className='flex gap-5 pe-5'>
+                  <a href=''>Contact Us</a>
+                  <a href='https://sites.google.com/view/calorie-guard/home'>Privacy</a>
+                </div>
               </div>
             </div>
           </div>
