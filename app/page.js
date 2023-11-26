@@ -510,7 +510,7 @@ export default function Home() {
           </div>
 
           <div className='relative mx-5'>
-            <div className='h-[40vh] w-full bg-[#006a4e] text-white absolute top-[20vh] rounded-3xl p-10'>
+            <div className='h-[40vh] w-full bg-[#006a4e] text-white absolute top-[30vh] rounded-3xl p-10'>
               <p className='text-3xl'>About us</p>
               <div className="slideshow-container pt-5">
 
@@ -546,7 +546,7 @@ export default function Home() {
           </div>
 
           <div className='relative px-5'>
-            <section className="absolute top-[50vh] mt-10 p-10 w-[90%] mt-40 mb-20 rounded-xl text-black bg-[#03dffc80]" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
+            <section className="absolute top-[60vh] mt-10 p-10 w-[90%] mt-40 mb-20 rounded-xl text-black bg-[#03dffc80]" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
               <h2 className="text-2xl font-bold mb-5">Calculate Your Maintenance Calorie</h2>
               <div className="flex flex-col">
                 <label htmlFor="age" className="mb-2">Age:</label>
@@ -593,7 +593,7 @@ export default function Home() {
                 <a className='flex flex-row justify-center h-fit items-center text-blue-700 text-[10px]' href='https://www.google.com/search?q=what+is+maintenance+calories&sca_esv=585419522&rlz=1C1JZAP_enIN870IN870&sxsrf=AM9HkKk_T3MplQdJwjFuAjxPjbRLaSwk7w%3A1701007787177&ei=q1FjZaqnCoWm2roPgJ2HsAU&ved=0ahUKEwjqqKjn6-GCAxUFk1YBHYDOAVYQ4dUDCBA&uact=5&oq=what+is+maintenance+calories&gs_lp=Egxnd3Mtd2l6LXNlcnAiHHdoYXQgaXMgbWFpbnRlbmFuY2UgY2Fsb3JpZXMyChAjGIAEGIoFGCcyBhAAGAcYHjILEAAYgAQYigUYkQIyCxAAGIAEGIoFGJECMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeSI0MUIMDWPwJcAB4ApABAJgB8AGgAdUMqgEFMC42LjK4AQPIAQD4AQHCAgQQABhH4gMEGAAgQeIDBRIBMSBAiAYBkAYI&sclient=gws-wiz-serp'><strong><br />Know more about Maintenance Calorie</strong><FaExternalLinkAlt className='mt-8 ms-2' size={10} /></a>
               </div>
             </section>
-            <div className='absolute top-[240vh]'>
+            <div className='absolute top-[210vh]'>
               <h1 className='text-black text-5xl font-bold pb-10'>What we Promise?</h1>
               <div className='text-black flex flex-row items-center bg-[#FFFFFF90] rounded-t-3xl'>
                 <Image src="/resturant.png" height={300} width={260} alt='App View' />
