@@ -281,8 +281,9 @@ export default function Home() {
           <div className='flex flex-row justify-between mt-20 mb-5 px-10 items-center w-[80%] text-[#424242]'>
             <p>Copyright © 2023 CalorieGuard Inc. All rights reserved.</p>
             <div className='flex gap-5'>
-              <a href=''>Contact Us</a>
+              <a href='https://instagram.com/calorieguard.in?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=='>Contact Us</a>
               <a href='https://sites.google.com/view/calorie-guard/home'>Privacy</a>
+              <a href='https://sites.google.com/view/calorieguard1/home'>Terms of use</a>
             </div>
           </div>
         </div>
@@ -513,8 +514,9 @@ export default function Home() {
               <div className='flex flex-row text-[10px] justify-between mt-20 mb-5 items-top w-full text-[#424242]'>
                 <p>Copyright © 2023 CalorieGuard Inc.<br/> All rights reserved.</p>
                 <div className='flex gap-5 pe-5'>
-                  <a href=''>Contact Us</a>
+                  <a href='https://instagram.com/calorieguard.in?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=='>Contact Us</a>
                   <a href='https://sites.google.com/view/calorie-guard/home'>Privacy</a>
+                  <a href='https://sites.google.com/view/calorieguard1/home'>Terms of use</a>
                 </div>
               </div>
             </div>
