@@ -24,6 +24,61 @@ export default function Home() {
 
 
 
+
+  const [slideIndex, setSlideIndex] = useState(1);
+
+  useEffect(() => {
+    showSlides(slideIndex);
+  }, [slideIndex]);
+
+  const plusSlides = (n) => {
+    setSlideIndex((prevIndex) => {
+      let newIndex = prevIndex + n;
+
+      // Loop to the first slide if reached the end
+      if (newIndex > 3) {
+        newIndex = 1;
+      }
+
+      // Loop to the last slide if reached the beginning
+      if (newIndex < 1) {
+        newIndex = 3;
+      }
+
+      return newIndex;
+    });
+  };
+
+  const currentSlide = (n) => {
+    setSlideIndex(n);
+  };
+
+  const showSlides = (n) => {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+      setSlideIndex(1);
+    }
+    if (n < 1) {
+      setSlideIndex(slides.length);
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  };
+
+
+
+
+
+
+
   const [isDivOpen, setIsDivOpen] = useState(false);
   const [countdown, setCountdown] = useState(300); // 300 seconds = 5 minutes
 
@@ -453,8 +508,45 @@ export default function Home() {
               )}
             </div>
           </div>
+
+          <div className='relative mx-5'>
+            <div className='h-[40vh] w-full bg-[#006a4e] text-white absolute top-[20vh] rounded-3xl p-10'>
+              <p className='text-3xl'>About us</p>
+              <div className="slideshow-container pt-5">
+
+                <div className="mySlides fade">
+                  <div className="text">Stay Healthy</div>
+                  <img className='ms-40' width="48" height="48" src="https://img.icons8.com/color/48/heart-with-pulse.png" alt="heart-with-pulse"/>
+                </div>
+
+                <div className="mySlides fade">
+                  <div className="text">Our Tech</div>
+                  <img className='ms-40' width="48" height="48" src="https://img.icons8.com/stickers/100/technology.png" alt="technology"/>
+                </div>
+
+                <div className="mySlides fade">
+                  <div className="text">Our Trust</div>
+                  <img className='ms-40' width="48" height="48" src="https://img.icons8.com/color/48/trust--v1.png" alt="trust--v1"/>
+                </div>
+
+                <a className="prev" onClick={() => plusSlides(-1)}>
+                  ❮
+                </a>
+                <a className="next" onClick={() => plusSlides(1)}>
+                  ❯
+                </a>
+
+                <div style={{ textAlign: 'center' }} className='pt-10'>
+                  <span className="dot" onClick={() => currentSlide(1)}></span>
+                  <span className="dot" onClick={() => currentSlide(2)}></span>
+                  <span className="dot" onClick={() => currentSlide(3)}></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className='relative px-5'>
-            <section className="absolute top-0 mt-10 p-10 w-[90%] mt-40 mb-20 rounded-xl text-black bg-[#03dffc80]" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
+            <section className="absolute top-[50vh] mt-10 p-10 w-[90%] mt-40 mb-20 rounded-xl text-black bg-[#03dffc80]" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
               <h2 className="text-2xl font-bold mb-5">Calculate Your Maintenance Calorie</h2>
               <div className="flex flex-col">
                 <label htmlFor="age" className="mb-2">Age:</label>
@@ -512,7 +604,7 @@ export default function Home() {
                 <Image src="/lens.png" height={300} width={260} alt='App View' />
               </div>
               <div className='flex flex-row text-[10px] justify-between mt-20 mb-5 items-top w-full text-[#424242]'>
-                <p>Copyright © 2023 CalorieGuard Inc.<br/> All rights reserved.</p>
+                <p>Copyright © 2023 CalorieGuard Inc.<br /> All rights reserved.</p>
                 <div className='flex gap-5 pe-5'>
                   <a href='https://instagram.com/calorieguard.in?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=='>Contact Us</a>
                   <a href='https://sites.google.com/view/calorie-guard/home'>Privacy</a>
@@ -586,6 +678,82 @@ export default function Home() {
     color: #333; /* Dark grey text color */
     animation: fadeInDown 1s ease-out;
   }
+
+
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
 `}</style>
       </main>
     )
