@@ -29,7 +29,7 @@ export default function Home() {
 
   useEffect(() => {
     showSlides(slideIndex);
-  }, [slideIndex]);
+  }, [slideIndex,animationClass]);
 
   const plusSlides = (n) => {
     setSlideIndex((prevIndex) => {
@@ -277,6 +277,39 @@ export default function Home() {
           <div className='w-screen flex justify-center'>
             <Image src="/down.gif" height={60} width={60} className='me-40' />
           </div>
+          <div className='ms-20 mt-20 h-[60vh] w-[70%] bg-[#006a4e] text-white rounded-3xl p-10'>
+            <p className='text-3xl'>About us</p>
+            <div className="slideshow-container">
+
+              <div className="mySlides fade">
+                <div className="text">Stay Healthy</div>
+                <img className='ms-40' width="48" height="48" src="https://img.icons8.com/color/48/heart-with-pulse.png" alt="heart-with-pulse" />
+              </div>
+
+              <div className="mySlides fade">
+                <div className="text">Our Tech</div>
+                <img className='ms-20' width="48" height="48" src="https://img.icons8.com/stickers/100/technology.png" alt="technology" />
+              </div>
+
+              <div className="mySlides fade">
+                <div className="text">Our Trust</div>
+                <img className='ms-20' width="48" height="48" src="https://img.icons8.com/color/48/trust--v1.png" alt="trust--v1" />
+              </div>
+
+              <a className="prev" onClick={() => plusSlides(-1)}>
+                ❮
+              </a>
+              <a className="next" onClick={() => plusSlides(1)}>
+                ❯
+              </a>
+
+              <div style={{ textAlign: 'center' }} className='pt-10'>
+                <span className="dot" onClick={() => currentSlide(1)}></span>
+                <span className="dot" onClick={() => currentSlide(2)}></span>
+                <span className="dot" onClick={() => currentSlide(3)}></span>
+              </div>
+            </div>
+          </div>
           <section className="calorie-section mt-10 p-10 w-[50%] ms-40 mt-40 mb-20 rounded-xl text-black" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', background: 'linear-gradient(to bottom, transparent, skyblue)' }}>
             <h2 className="text-2xl font-bold mb-5">Calculate Your Maintenance Calorie</h2>
             <div className="flex flex-col">
@@ -405,6 +438,83 @@ export default function Home() {
     color: #333; /* Dark grey text color */
     animation: fadeInDown 1s ease-out;
   }
+
+
+  
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
 `}</style>
       </main>
       :
@@ -516,17 +626,17 @@ export default function Home() {
 
                 <div className="mySlides fade">
                   <div className="text">Stay Healthy</div>
-                  <img className='ms-20' width="48" height="48" src="https://img.icons8.com/color/48/heart-with-pulse.png" alt="heart-with-pulse"/>
+                  <img className='ms-20' width="48" height="48" src="https://img.icons8.com/color/48/heart-with-pulse.png" alt="heart-with-pulse" />
                 </div>
 
                 <div className="mySlides fade">
                   <div className="text">Our Tech</div>
-                  <img className='ms-20' width="48" height="48" src="https://img.icons8.com/stickers/100/technology.png" alt="technology"/>
+                  <img className='ms-20' width="48" height="48" src="https://img.icons8.com/stickers/100/technology.png" alt="technology" />
                 </div>
 
                 <div className="mySlides fade">
                   <div className="text">Our Trust</div>
-                  <img className='ms-20' width="48" height="48" src="https://img.icons8.com/color/48/trust--v1.png" alt="trust--v1"/>
+                  <img className='ms-20' width="48" height="48" src="https://img.icons8.com/color/48/trust--v1.png" alt="trust--v1" />
                 </div>
 
                 <a className="prev" onClick={() => plusSlides(-1)}>
