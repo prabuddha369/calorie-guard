@@ -407,9 +407,9 @@ export default function Home() {
                 <div
                   style={{
                     position: 'fixed',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
+                    top: '20%',
+                    left: '20%',
+                    transform: 'translate(-10%, -10%)',
                     background: 'white',
                     padding: '20px',
                     boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)',
@@ -421,11 +421,11 @@ export default function Home() {
                   </span>
                   <Image src="/UPI.png" width={60} height={20} alt='UPI' />
                   <div>
-                    <Image src="/scanner.jpg" alt='Payment Scanner' height={400} width={400} />
+                    <Image src="/scanner.jpg" alt='Calorie Guard Payment Scanner' height={400} width={400} />
                   </div>
                   <div className='text-center'><strong>SCAN & PAY<br />or</strong></div>
                   <div className='text-center'>
-                    <button onClick={handleDownload} className='bg-orange-700 text-white rounded-xl p-2 mb-5'>Download QR</button>
+                    <button onClick={handleDownload} className='bg-orange-700 text-white rounded-xl p-3 mt-3 mb-5'>Download QR</button>
                   </div>
                   <div className='text-center'>
                     Time remaining: <strong>{formatTime(minutes)}:{formatTime(seconds)}</strong>
