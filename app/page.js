@@ -637,21 +637,21 @@ export default function Home() {
                 <div className="mySlides fade">
                   <div className="text font-bold">What we do?</div>
                   <div className='w-full flex justify-center'>
-                    <div className={`w-[60%] text-[15px] text-center ${rajdhani.className}`}>We help everyone to become fit and healthy and build their dream body type. 💪🌿✨</div>
+                    <div className={`w-[60%] text-[18px] text-center ${rajdhani.className}`}>We help everyone to become fit and healthy and build their dream body type. 💪🌿✨</div>
                   </div>
                 </div>
 
                 <div className="mySlides fade">
                   <div className="text font-bold">How we do it?</div>
                   <div className='w-full flex justify-center'>
-                    <div className={`w-[60%] text-[15px] text-center ${rajdhani.className}`}>We provide the most efficient & accurate way to track down calories of any food. 📊🍽️💡</div>
+                    <div className={`w-[60%] text-[18px] text-center ${rajdhani.className}`}>We provide the most efficient & accurate way to track down calories of any food. 📊🍽️💡</div>
                   </div>
                 </div>
 
                 <div className="mySlides fade">
                   <div className="text font-bold">How it works?</div>
                   <div className='w-full flex justify-center'>
-                    <div className={`w-[70%] text-[15px] text-center ${rajdhani.className}`}>Know about your maintenance calories via our maintenance calorie calculator.Track your daily calories through our food tracker.It's that simple! 📊🍽️ </div>
+                    <div className={`w-[70%] text-[17px] text-center ${rajdhani.className}`}>Know about your maintenance calories via our maintenance calorie calculator.Track your daily calories through our food tracker.It's that simple! 📊🍽️ </div>
                   </div>
                 </div>
 
