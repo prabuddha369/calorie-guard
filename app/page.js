@@ -837,7 +837,7 @@ export default function Home() {
 
   .text {
     color: black;
-    font-size: 25px;
+    font-size: 18px;
     padding: 8px 12px;
     width: 100%;
     text-align: center;
