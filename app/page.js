@@ -728,7 +728,7 @@ export default function Home() {
               </div>
               <div className='text-black flex flex-row items-center pt-10 bg-[#FFFFFF90]'>
                 <h2 className='text-2xl ms-2 font-bold me-5'>Scan your Foods<br />and get Caloriefic Data<br />at Your Finger Tips<br /><br/><strong className='text-xl'>Comming soon....</strong></h2>
-                <Image src="/lens.png" height={300} width={260} alt='App View' />
+                <Image src="/lens.png" height={300} width={260} alt='App View' className='me-10' />
               </div>
               <div className='flex flex-row text-[10px] justify-between mt-20 mb-5 items-top w-full text-[#424242]'>
                 <p>Copyright © 2023 CalorieGuard Inc.<br /> All rights reserved.</p>
