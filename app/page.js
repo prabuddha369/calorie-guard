@@ -4,6 +4,9 @@ import { useEffect, useState } from 'react';
 import { ImQuotesLeft } from "react-icons/im";
 import { ImQuotesRight } from "react-icons/im";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { Rajdhani } from 'next/font/google';
+
+const rajdhani = Rajdhani({ subsets: ['latin'], weight: ['500'] })
 
 export default function Home() {
 
@@ -21,7 +24,7 @@ export default function Home() {
     };
   }, []);
 
-  
+
   const [animationClass, setAnimationClass] = useState('');
   const [age, setAge] = useState(20);
   const [height, setHeight] = useState(160);
@@ -45,7 +48,7 @@ export default function Home() {
 
   useEffect(() => {
     showSlides(slideIndex);
-  }, [slideIndex, animationClass,windowWidth]);
+  }, [slideIndex, animationClass, windowWidth]);
 
   const plusSlides = (n) => {
     setSlideIndex((prevIndex) => {
@@ -627,28 +630,28 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='relative mx-5'>
-            <div className='h-[45vh] w-full bg-white text-white absolute top-[30vh] rounded-3xl p-10' style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
-              <div className="slideshow-container text-black pt-5">
+          <div className='relative mx-12'>
+            <div className='h-[45vh] w-full bg-white text-white absolute top-[30vh] rounded-3xl pt-5' style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
+              <div className="slideshow-container text-black">
 
                 <div className="mySlides fade">
-                  <div className="text">What we do?</div>
+                  <div className="text font-bold">What we do?</div>
                   <div className='w-full flex justify-center'>
-                    <div className='w-40 text-[15px] text-center'>We help everyone to become fit and healthy and build their dream body type. 💪🌿✨</div>
+                    <div className={`w-[60%] text-[15px] text-center ${rajdhani.className}`}>We help everyone to become fit and healthy and build their dream body type. 💪🌿✨</div>
                   </div>
                 </div>
 
                 <div className="mySlides fade">
-                  <div className="text">How we do it?</div>
+                  <div className="text font-bold">How we do it?</div>
                   <div className='w-full flex justify-center'>
-                    <div className='w-40 text-[15px] text-center'>We provide the most efficient & accurate way to track down calories of any food. 📊🍽️💡</div>
+                    <div className={`w-[60%] text-[15px] text-center ${rajdhani.className}`}>We provide the most efficient & accurate way to track down calories of any food. 📊🍽️💡</div>
                   </div>
                 </div>
 
                 <div className="mySlides fade">
-                  <div className="text">How it works?</div>
+                  <div className="text font-bold">How it works?</div>
                   <div className='w-full flex justify-center'>
-                    <div className='w-40 text-[10px] text-center'>Know about your maintenance calories via our maintenance calorie calculator. Track your daily calories through our food tracker. It's that simple! 📊🍽️ </div>
+                    <div className={`w-[70%] text-[15px] text-center ${rajdhani.className}`}>Know about your maintenance calories via our maintenance calorie calculator.Track your daily calories through our food tracker.It's that simple! 📊🍽️ </div>
                   </div>
                 </div>
 
@@ -665,7 +668,7 @@ export default function Home() {
                   <span className="dot" onClick={() => currentSlide(3)}></span>
                 </div>
               </div>
-              <a href='#' className='absolute bottom-5 text-black text-blue-700 text-[10px] flex flex-row gap-2'><p>Know More </p><FaExternalLinkAlt size={10} /></a>
+              <a href='#' className='absolute bottom-5 left-10 text-black text-blue-700 text-[10px] flex flex-row gap-2'><p>Know More </p><FaExternalLinkAlt size={10} /></a>
             </div>
           </div>
 
@@ -834,18 +837,10 @@ export default function Home() {
 
   .text {
     color: black;
-    font-size: 35px;
+    font-size: 25px;
     padding: 8px 12px;
     width: 100%;
     text-align: center;
-  }
-
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
   }
 
 
