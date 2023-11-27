@@ -6,6 +6,22 @@ import { ImQuotesRight } from "react-icons/im";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Home() {
+
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  
   const [animationClass, setAnimationClass] = useState('');
   const [age, setAge] = useState(20);
   const [height, setHeight] = useState(160);
@@ -29,7 +45,7 @@ export default function Home() {
 
   useEffect(() => {
     showSlides(slideIndex);
-  }, [slideIndex, animationClass]);
+  }, [slideIndex, animationClass,windowWidth]);
 
   const plusSlides = (n) => {
     setSlideIndex((prevIndex) => {
@@ -160,20 +176,6 @@ export default function Home() {
 
     return <span>{currentText}</span>;
   };
-
-  const [windowWidth, setWindowWidth] = useState(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize();
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   return (
     (windowWidth >= 768 ?
