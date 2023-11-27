@@ -632,21 +632,21 @@ export default function Home() {
               <div className="mySlides fade">
                 <div className="text">What we do?</div>
                 <div className='w-full flex justify-center'>
-                  <div className='w-52 text-[10px] text-center'>We help everyone to become fit and healthy and build their dream body type. 💪🌿✨</div>
+                  <div className='w-40 text-[10px] text-center'>We help everyone to become fit and healthy and build their dream body type. 💪🌿✨</div>
                 </div>
               </div>
 
               <div className="mySlides fade">
                 <div className="text">How we do it?</div>
                 <div className='w-full flex justify-center'>
-                  <div className='w-52 text-[10px] text-center'>We provide the most efficient & accurate way to track down calories of any food. 📊🍽️💡</div>
+                  <div className='w-40 text-[10px] text-center'>We provide the most efficient & accurate way to track down calories of any food. 📊🍽️💡</div>
                 </div>
               </div>
 
               <div className="mySlides fade">
                 <div className="text">How it works?</div>
                 <div className='w-full flex justify-center'>
-                  <div className='w-60 text-[10px] text-center'>Know about your maintenance calories via our maintenance calorie calculator. 🧮✨ Track your daily calories through our food tracker. It's that simple! 📊🍽️ </div>
+                  <div className='w-40 text-[10px] text-center'>Know about your maintenance calories via our maintenance calorie calculator. 🧮✨ Track your daily calories through our food tracker. It's that simple! 📊🍽️ </div>
                 </div>
               </div>
 
