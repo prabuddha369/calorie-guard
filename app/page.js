@@ -29,7 +29,7 @@ export default function Home() {
 
   useEffect(() => {
     showSlides(slideIndex);
-  }, [slideIndex,animationClass]);
+  }, [slideIndex, animationClass]);
 
   const plusSlides = (n) => {
     setSlideIndex((prevIndex) => {
@@ -277,23 +277,28 @@ export default function Home() {
           <div className='w-screen flex justify-center'>
             <Image src="/down.gif" height={60} width={60} className='me-40' />
           </div>
-          <div className='ms-20 mt-20 h-[60vh] w-[70%] bg-[#006a4e] text-white rounded-3xl p-10'>
-            <p className='text-3xl'>About us</p>
-            <div className="slideshow-container">
+          <div className='relative ms-20 mt-20 h-[60vh] w-[70%] bg-white text-white rounded-3xl p-10' style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
+            <div className="slideshow-container text-black">
 
               <div className="mySlides fade">
-                <div className="text">Stay Healthy</div>
-                <img className='ms-40' width="48" height="48" src="https://img.icons8.com/color/48/heart-with-pulse.png" alt="heart-with-pulse" />
+                <div className="text">What we do?</div>
+                <div className='w-full flex justify-center'>
+                  <div className='w-80 text-xl text-center'>We help everyone to become fit and healthy and build their dream body type. 💪🌿✨</div>
+                </div>
               </div>
 
               <div className="mySlides fade">
-                <div className="text">Our Tech</div>
-                <img className='ms-20' width="48" height="48" src="https://img.icons8.com/stickers/100/technology.png" alt="technology" />
+                <div className="text">How we do it?</div>
+                <div className='w-full flex justify-center'>
+                  <div className='w-80 text-xl text-center'>We provide the most efficient & accurate way to track down calories of any food. 📊🍽️💡</div>
+                </div>
               </div>
 
               <div className="mySlides fade">
-                <div className="text">Our Trust</div>
-                <img className='ms-20' width="48" height="48" src="https://img.icons8.com/color/48/trust--v1.png" alt="trust--v1" />
+                <div className="text">How it works?</div>
+                <div className='w-full flex justify-center'>
+                  <div className='w-80 text-xl text-center'>Know about your maintenance calories via our maintenance calorie calculator. 🧮✨ Track your daily calories through our food tracker. It's that simple! 📊🍽️ </div>
+                </div>
               </div>
 
               <a className="prev" onClick={() => plusSlides(-1)}>
@@ -309,6 +314,7 @@ export default function Home() {
                 <span className="dot" onClick={() => currentSlide(3)}></span>
               </div>
             </div>
+            <a href='#' className='absolute bottom-5 text-black text-blue-700 text-[10px] flex flex-row gap-2'><p>Know More </p><FaExternalLinkAlt size={10}/></a>
           </div>
           <section className="calorie-section mt-10 p-10 w-[50%] ms-40 mt-40 mb-20 rounded-xl text-black" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', background: 'linear-gradient(to bottom, transparent, skyblue)' }}>
             <h2 className="text-2xl font-bold mb-5">Calculate Your Maintenance Calorie</h2>
@@ -455,7 +461,7 @@ export default function Home() {
     width: auto;
     padding: 16px;
     margin-top: -22px;
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -474,8 +480,8 @@ export default function Home() {
   }
 
   .text {
-    color: #f2f2f2;
-    font-size: 15px;
+    color: black;
+    font-size: 40px;
     padding: 8px 12px;
     width: 100%;
     text-align: center;
@@ -620,24 +626,29 @@ export default function Home() {
           </div>
 
           <div className='relative mx-5'>
-            <div className='h-[40vh] w-full bg-[#006a4e] text-white absolute top-[30vh] rounded-3xl p-10'>
-              <p className='text-3xl'>About us</p>
-              <div className="slideshow-container pt-5">
+            <div className='h-[40vh] w-full bg-white text-white absolute top-[30vh] rounded-3xl p-10' style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
+              <div className="slideshow-container text-black pt-5">
 
-                <div className="mySlides fade">
-                  <div className="text">Stay Healthy</div>
-                  <img className='ms-20' width="48" height="48" src="https://img.icons8.com/color/48/heart-with-pulse.png" alt="heart-with-pulse" />
+              <div className="mySlides fade">
+                <div className="text">What we do?</div>
+                <div className='w-full flex justify-center'>
+                  <div className='w-52 text-xl text-center'>We help everyone to become fit and healthy and build their dream body type. 💪🌿✨</div>
                 </div>
+              </div>
 
-                <div className="mySlides fade">
-                  <div className="text">Our Tech</div>
-                  <img className='ms-20' width="48" height="48" src="https://img.icons8.com/stickers/100/technology.png" alt="technology" />
+              <div className="mySlides fade">
+                <div className="text">How we do it?</div>
+                <div className='w-full flex justify-center'>
+                  <div className='w-52 text-xl text-center'>We provide the most efficient & accurate way to track down calories of any food. 📊🍽️💡</div>
                 </div>
+              </div>
 
-                <div className="mySlides fade">
-                  <div className="text">Our Trust</div>
-                  <img className='ms-20' width="48" height="48" src="https://img.icons8.com/color/48/trust--v1.png" alt="trust--v1" />
+              <div className="mySlides fade">
+                <div className="text">How it works?</div>
+                <div className='w-full flex justify-center'>
+                  <div className='w-60 text-md text-center'>Know about your maintenance calories via our maintenance calorie calculator. 🧮✨ Track your daily calories through our food tracker. It's that simple! 📊🍽️ </div>
                 </div>
+              </div>
 
                 <a className="prev" onClick={() => plusSlides(-1)}>
                   ❮
@@ -652,6 +663,7 @@ export default function Home() {
                   <span className="dot" onClick={() => currentSlide(3)}></span>
                 </div>
               </div>
+              <a href='#' className='absolute bottom-5 text-black text-blue-700 text-[10px] flex flex-row gap-2'><p>Know More </p><FaExternalLinkAlt size={10}/></a>
             </div>
           </div>
 
@@ -804,7 +816,7 @@ export default function Home() {
     width: auto;
     padding: 16px;
     margin-top: -22px;
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -823,8 +835,8 @@ export default function Home() {
   }
 
   .text {
-    color: #f2f2f2;
-    font-size: 15px;
+    color: black;
+    font-size: 35px;
     padding: 8px 12px;
     width: 100%;
     text-align: center;
