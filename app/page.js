@@ -543,34 +543,32 @@ export default function Home() {
             <Image src="/playstore.png" height={5} width={100} />
           </div>
         </div>
-        <div className="scrollable-container">
-          <div
-            className="absolute right-64 transform translate-x-full"
+        <div
+          className="absolute right-64 transform translate-x-full"
+          style={{
+            width: '400px',
+          }}
+        >
+          <Image
+            src="/image1.png"
+            alt="Healthy food"
+            width={600}
+            height={600}
+            className='rounded-full spin-image'
             style={{
-              width: '400px',
+              boxShadow: '5px 5px 5px 0px rgba(0, 0, 0, 0.75)',
+              animation: 'spin 10s infinite linear',
             }}
-          >
-            <Image
-              src="/image1.png"
-              alt="Healthy food"
-              width={600}
-              height={600}
-              className='rounded-full spin-image'
-              style={{
-                boxShadow: '5px 5px 5px 0px rgba(0, 0, 0, 0.75)',
-                animation: 'spin 10s infinite linear',
-              }}
-            />
-          </div>
-          <div className='w-full'>
-            <blockquote className="relative quote w-[70%] h-fit ms-[7%] mt-20 bg-[#bfebf5]">
-              <ImQuotesLeft size={30} />
-              <p className='p-5 ps-14'>The dream that everyone seeks –
-                A life without medicine.
-                The world will be a better place if that happens!</p>
-              <ImQuotesRight size={30} className='absolute right-5 bottom-5' />
-            </blockquote>
-          </div>
+          />
+        </div>
+        <div className="scrollable-container">
+          <blockquote className="relative quote w-[70%] h-fit ms-[7%] mt-20 bg-[#bfebf5]">
+            <ImQuotesLeft size={30} />
+            <p className='p-5 ps-14'>The dream that everyone seeks –
+              A life without medicine.
+              The world will be a better place if that happens!</p>
+            <ImQuotesRight size={30} className='absolute right-5 bottom-5' />
+          </blockquote>
           <div className='w-screen flex justify-center'>
             <Image src="/down.gif" height={60} width={60} className='me-40' />
           </div>
@@ -717,7 +715,7 @@ export default function Home() {
                 <a className='flex flex-row justify-center h-fit items-center text-blue-700 text-[10px]' href='https://www.google.com/search?q=what+is+maintenance+calories&sca_esv=585419522&rlz=1C1JZAP_enIN870IN870&sxsrf=AM9HkKk_T3MplQdJwjFuAjxPjbRLaSwk7w%3A1701007787177&ei=q1FjZaqnCoWm2roPgJ2HsAU&ved=0ahUKEwjqqKjn6-GCAxUFk1YBHYDOAVYQ4dUDCBA&uact=5&oq=what+is+maintenance+calories&gs_lp=Egxnd3Mtd2l6LXNlcnAiHHdoYXQgaXMgbWFpbnRlbmFuY2UgY2Fsb3JpZXMyChAjGIAEGIoFGCcyBhAAGAcYHjILEAAYgAQYigUYkQIyCxAAGIAEGIoFGJECMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeSI0MUIMDWPwJcAB4ApABAJgB8AGgAdUMqgEFMC42LjK4AQPIAQD4AQHCAgQQABhH4gMEGAAgQeIDBRIBMSBAiAYBkAYI&sclient=gws-wiz-serp'><strong><br />Know more about Maintenance Calorie</strong><FaExternalLinkAlt className='mt-8 ms-2' size={10} /></a>
               </div>
             </section>
-            <div className='absolute top-[210vh]'>
+            <div className='absolute top-[220vh]'>
               <h1 className='text-black text-5xl font-bold pb-10'>What we Promise?</h1>
               <div className='text-black flex flex-row items-center bg-[#FFFFFF90] rounded-t-3xl'>
                 <Image src="/resturant.png" height={300} width={260} alt='App View' />
