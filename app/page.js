@@ -626,7 +626,7 @@ export default function Home() {
           </div>
 
           <div className='relative mx-5'>
-            <div className='h-[40vh] w-full bg-white text-white absolute top-[30vh] rounded-3xl p-10' style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
+            <div className='h-[45vh] w-full bg-white text-white absolute top-[30vh] rounded-3xl p-10' style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
               <div className="slideshow-container text-black pt-5">
 
               <div className="mySlides fade">
@@ -668,7 +668,7 @@ export default function Home() {
           </div>
 
           <div className='relative px-5'>
-            <section className="absolute top-[60vh] mt-10 p-10 w-[90%] mt-40 mb-20 rounded-xl text-black bg-[#03dffc80]" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
+            <section className="absolute top-[65vh] mt-10 p-10 w-[90%] mt-40 mb-20 rounded-xl text-black bg-[#03dffc80]" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
               <h2 className="text-2xl font-bold mb-5">Calculate Your Maintenance Calorie</h2>
               <div className="flex flex-col">
                 <label htmlFor="age" className="mb-2">Age:</label>
