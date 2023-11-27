@@ -631,7 +631,7 @@ export default function Home() {
           </div>
 
           <div className='relative mx-12'>
-            <div className='h-[250px] w-full bg-white text-white absolute top-[30vh] rounded-3xl pt-5' style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
+            <div className='h-[260px] w-full bg-white text-white absolute top-[30vh] rounded-3xl pt-5' style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
               <div className="slideshow-container text-black">
 
                 <div className="mySlides fade">
