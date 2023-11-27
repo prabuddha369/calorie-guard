@@ -657,7 +657,7 @@ export default function Home() {
                   ❯
                 </a>
 
-                <div style={{ textAlign: 'center' }} className='pt-10'>
+                <div style={{ textAlign: 'center' }} className='pt-5'>
                   <span className="dot" onClick={() => currentSlide(1)}></span>
                   <span className="dot" onClick={() => currentSlide(2)}></span>
                   <span className="dot" onClick={() => currentSlide(3)}></span>
