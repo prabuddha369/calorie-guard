@@ -567,7 +567,7 @@ export default function Home() {
           />
         </div>
         <div className="scrollable-container">
-          <blockquote className="relative quote w-[70%] h-fit ms-[7%] mt-20 bg-[#bfebf5]">
+          <blockquote className="relative quote w-[70%] h-fit ms-[7%] mt-20 bg-[#CFEDFB70] rounded-xl" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
             <ImQuotesLeft size={30} />
             <p className='p-5 ps-14'>The dream that everyone seeks –
               A life without medicine.
@@ -631,7 +631,7 @@ export default function Home() {
           </div>
 
           <div className='relative mx-12'>
-            <div className='h-[260px] w-full bg-white text-white absolute top-[30vh] rounded-3xl pt-5' style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
+            <div className='h-[260px] w-full bg-[#FFFFFF99] text-white absolute top-[30vh] rounded-3xl pt-5' style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
               <div className="slideshow-container text-black">
 
                 <div className="mySlides fade">
@@ -644,14 +644,14 @@ export default function Home() {
                 <div className="mySlides fade">
                   <div className="text font-bold">How we do it?</div>
                   <div className='w-full flex justify-center'>
-                    <div className={`w-[60%] text-[18px] text-center ${rajdhani.className}`}>We provide the most efficient & accurate way to track down calories of any food. 📊🍽️💡</div>
+                    <div className={`w-[60%] text-[18px] text-center ${rajdhani.className}`}>We provide the most efficient & accurate way to track down calories of any food. 📊🚀💡</div>
                   </div>
                 </div>
 
                 <div className="mySlides fade">
                   <div className="text font-bold">How it works?</div>
                   <div className='w-full flex justify-center'>
-                    <div className={`w-[70%] text-[17px] text-center ${rajdhani.className}`}>Know about your maintenance calories via our maintenance calorie calculator.Track your daily calories through our food tracker.It's that simple! 📊🍽️ </div>
+                    <div className={`w-[60%] text-[17px] text-center ${rajdhani.className}`}>Know about your daily required calories via our calorie calculator and food tracker.It's that simple!⚙️ </div>
                   </div>
                 </div>
 
@@ -673,7 +673,7 @@ export default function Home() {
           </div>
 
           <div className='relative px-5'>
-            <section className="absolute top-[55vh] mt-10 p-10 w-[90%] mt-40 mb-20 rounded-xl text-black bg-[#03dffc80]" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
+            <section className="absolute top-[55vh] mt-10 p-10 w-[90%] mt-40 mb-20 rounded-xl text-black bg-[#97CD9980]" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
               <h2 className="text-2xl font-bold mb-5">Calculate Your Maintenance Calorie</h2>
               <div className="flex flex-col">
                 <label htmlFor="age" className="mb-2">Age:</label>
@@ -727,7 +727,7 @@ export default function Home() {
                 <h2 className='text-2xl font-bold ms-5'>All your Local Resturant's<br />Food Calorie <br />Data at Your Finger Tips<br /><br /><strong className='text-xl'>Comming soon....</strong></h2>
               </div>
               <div className='text-black flex flex-row items-center pt-10 bg-[#FFFFFF90]'>
-                <h2 className='text-2xl ms-10 font-bold me-5'>Scan your Foods<br />and get Caloriefic Data<br />at Your Finger Tips<br /><strong className='text-xl'>Comming soon....</strong></h2>
+                <h2 className='text-2xl ms-2 font-bold me-5'>Scan your Foods<br />and get Caloriefic Data<br />at Your Finger Tips<br /><br/><strong className='text-xl'>Comming soon....</strong></h2>
                 <Image src="/lens.png" height={300} width={260} alt='App View' />
               </div>
               <div className='flex flex-row text-[10px] justify-between mt-20 mb-5 items-top w-full text-[#424242]'>
@@ -797,8 +797,6 @@ export default function Home() {
   }
   
   .quote {
-    border: 2px solid #333; /* Dark grey border */
-    border-radius: 10px; /* Rounded corners */
     padding: 20px;
     font-size: 1.2rem; /* Adjust the font size as needed */
     font-family: 'Arial', sans-serif; /* Use a suitable font-family */
