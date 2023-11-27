@@ -819,8 +819,6 @@ export default function Home() {
     color: black;
     font-weight: bold;
     font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
     user-select: none;
   }
 
