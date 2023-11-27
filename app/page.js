@@ -314,7 +314,7 @@ export default function Home() {
                 <span className="dot" onClick={() => currentSlide(3)}></span>
               </div>
             </div>
-            <a href='#' className='absolute bottom-5 text-black text-blue-700 text-[10px] flex flex-row gap-2'><p>Know More </p><FaExternalLinkAlt size={10}/></a>
+            <a href='#' className='absolute bottom-5 text-black text-blue-700 text-[10px] flex flex-row gap-2'><p>Know More </p><FaExternalLinkAlt size={10} /></a>
           </div>
           <section className="calorie-section mt-10 p-10 w-[50%] ms-40 mt-40 mb-20 rounded-xl text-black" style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', background: 'linear-gradient(to bottom, transparent, skyblue)' }}>
             <h2 className="text-2xl font-bold mb-5">Calculate Your Maintenance Calorie</h2>
@@ -562,13 +562,15 @@ export default function Home() {
               }}
             />
           </div>
-          <blockquote className="relative quote w-[70%] h-fit ms-[7%] mt-20 bg-[#bfebf5]">
-            <ImQuotesLeft size={30} />
-            <p className='p-5 ps-14'>The dream that everyone seeks –
-              A life without medicine.
-              The world will be a better place if that happens!</p>
-            <ImQuotesRight size={30} className='absolute right-5 bottom-5' />
-          </blockquote>
+          <div className='w-full'>
+            <blockquote className="relative quote w-[70%] h-fit ms-[7%] mt-20 bg-[#bfebf5]">
+              <ImQuotesLeft size={30} />
+              <p className='p-5 ps-14'>The dream that everyone seeks –
+                A life without medicine.
+                The world will be a better place if that happens!</p>
+              <ImQuotesRight size={30} className='absolute right-5 bottom-5' />
+            </blockquote>
+          </div>
           <div className='w-screen flex justify-center'>
             <Image src="/down.gif" height={60} width={60} className='me-40' />
           </div>
@@ -629,26 +631,26 @@ export default function Home() {
             <div className='h-[45vh] w-full bg-white text-white absolute top-[30vh] rounded-3xl p-10' style={{ boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)' }}>
               <div className="slideshow-container text-black pt-5">
 
-              <div className="mySlides fade">
-                <div className="text">What we do?</div>
-                <div className='w-full flex justify-center'>
-                  <div className='w-40 text-[15px] text-center'>We help everyone to become fit and healthy and build their dream body type. 💪🌿✨</div>
+                <div className="mySlides fade">
+                  <div className="text">What we do?</div>
+                  <div className='w-full flex justify-center'>
+                    <div className='w-40 text-[15px] text-center'>We help everyone to become fit and healthy and build their dream body type. 💪🌿✨</div>
+                  </div>
                 </div>
-              </div>
 
-              <div className="mySlides fade">
-                <div className="text">How we do it?</div>
-                <div className='w-full flex justify-center'>
-                  <div className='w-40 text-[15px] text-center'>We provide the most efficient & accurate way to track down calories of any food. 📊🍽️💡</div>
+                <div className="mySlides fade">
+                  <div className="text">How we do it?</div>
+                  <div className='w-full flex justify-center'>
+                    <div className='w-40 text-[15px] text-center'>We provide the most efficient & accurate way to track down calories of any food. 📊🍽️💡</div>
+                  </div>
                 </div>
-              </div>
 
-              <div className="mySlides fade">
-                <div className="text">How it works?</div>
-                <div className='w-full flex justify-center'>
-                  <div className='w-40 text-[10px] text-center'>Know about your maintenance calories via our maintenance calorie calculator. Track your daily calories through our food tracker. It's that simple! 📊🍽️ </div>
+                <div className="mySlides fade">
+                  <div className="text">How it works?</div>
+                  <div className='w-full flex justify-center'>
+                    <div className='w-40 text-[10px] text-center'>Know about your maintenance calories via our maintenance calorie calculator. Track your daily calories through our food tracker. It's that simple! 📊🍽️ </div>
+                  </div>
                 </div>
-              </div>
 
                 <a className="prev" onClick={() => plusSlides(-1)}>
                   ❮
@@ -663,7 +665,7 @@ export default function Home() {
                   <span className="dot" onClick={() => currentSlide(3)}></span>
                 </div>
               </div>
-              <a href='#' className='absolute bottom-5 text-black text-blue-700 text-[10px] flex flex-row gap-2'><p>Know More </p><FaExternalLinkAlt size={10}/></a>
+              <a href='#' className='absolute bottom-5 text-black text-blue-700 text-[10px] flex flex-row gap-2'><p>Know More </p><FaExternalLinkAlt size={10} /></a>
             </div>
           </div>
 
