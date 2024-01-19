@@ -455,7 +455,7 @@ export default function Home() {
             </div>
           </div>
           <a
-            href="#"
+            href="/about"
             className="absolute bottom-5 text-black text-blue-700 text-[10px] flex flex-row gap-2"
           >
             <p>Know More </p>
@@ -949,7 +949,7 @@ export default function Home() {
               </div>
             </div>
             <a
-              href="#"
+              href="/about"
               className="absolute bottom-5 left-10 text-black text-blue-700 text-[10px] flex flex-row gap-2"
             >
               <p>Know More </p>
