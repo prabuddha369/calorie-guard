@@ -205,7 +205,6 @@ export default function Home() {
         break;
     }
     const calculatedResultRounded = Math.round(BMR);
-    console.log("calculatedResultRounded: ", calculatedResultRounded);
     setCalculatedValue(calculatedResultRounded);
   };
 
@@ -237,22 +236,21 @@ export default function Home() {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
   const ComboBox = () => {
-    console.log("value: ", value);
     return (
-      <Popover open={open} onOpenChange={setOpen}>
+      <Popover open={open} onOpenChange={setOpen} className="w-full">
         <PopoverTrigger asChild>
           <Button
             variant="outline"
             role="combobox"
             aria-expanded={open}
-            className="w-full justify-between"
+            className="w-full justify-start"
           >
             {value
               ? frameworks.find((framework) => framework.value === value)?.label
               : "Select Activity Level..."}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-full p-0">
+        <PopoverContent className="w-[45vw] p-0">
           <Command>
             <CommandInput
               placeholder="Search activity level..."
