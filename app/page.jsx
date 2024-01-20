@@ -364,7 +364,7 @@ export default function Home() {
                   width={300}
                 />
               </div>
-              <div>
+              <div className="text-center">
                 UPI ID: <a href="upi://pay?pa=arghyadipbiswas9259@sbi&pn=Arghyadip%20Biswas&cu=INR" className="text-blue-500 text-center">arghyadipbiswas9259@sbi</a>
               </div>
               <div className="text-center">
@@ -878,7 +878,7 @@ export default function Home() {
                     width={400}
                   />
                 </div>
-                <div>
+                <div className="text-center">
                 UPI ID: <a href="upi://pay?pa=arghyadipbiswas9259@sbi&pn=Arghyadip%20Biswas&cu=INR" className="text-blue-500 text-center">arghyadipbiswas9259@sbi</a>
               </div>
                 <div className="text-center">
