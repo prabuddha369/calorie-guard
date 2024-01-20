@@ -100,7 +100,7 @@ These adaptations can include, among others:
           </p>
           <ul className="list-disc">
             <li>
-              Our Advisor is Arghyadip Biswas (Contact : <a href="www.arghyadipbiswas.com" target='_blank' className="text-blue-500 underline">www.arghyadipbiswas.com</a>)
+              Our Advisor is Arghyadip Biswas (Contact : <a href="https://arghyadipbiswas.com/" target='_blank' className="text-blue-500 underline">~arghyadipbiswas.com</a>)
             </li>
             <li>
               NCBI 

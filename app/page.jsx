@@ -355,9 +355,7 @@ export default function Home() {
                 <strong>SCAN to PAY</strong>
                 <Image src="/UPI.png" width={100} height={20} />
               </div>
-              <div>
-                UPI ID: <a href="arghyadipbiswas9259@sbi" className="text-blue-500">arghyadipbiswas9259@sbi</a>
-              </div>
+              
               <div>
                 <Image
                   src="/scanner.jpg"
@@ -880,6 +878,9 @@ export default function Home() {
                     width={400}
                   />
                 </div>
+                <div>
+                UPI ID: <a href="arghyadipbiswas9259@sbi" className="text-blue-500">arghyadipbiswas9259@sbi</a>
+              </div>
                 <div className="text-center">
                   <strong>
                     SCAN & PAY
@@ -887,6 +888,7 @@ export default function Home() {
                     or
                   </strong>
                 </div>
+                
                 <div className="text-center">
                   <button
                     onClick={handleDownload}
