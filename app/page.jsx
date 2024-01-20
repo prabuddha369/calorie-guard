@@ -356,6 +356,9 @@ export default function Home() {
                 <Image src="/UPI.png" width={100} height={20} />
               </div>
               <div>
+                UPI ID: <a href="arghyadipbiswas9259@sbi" className="text-blue-500">arghyadipbiswas9259@sbi</a>
+              </div>
+              <div>
                 <Image
                   src="/scanner.jpg"
                   alt="Payment Scanner"
