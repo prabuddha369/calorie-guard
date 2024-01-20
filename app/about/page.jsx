@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-
 function WeightLossPage() {
   const [showDonatePopup, setShowDonatePopup] = useState(false);
 
@@ -10,7 +9,7 @@ function WeightLossPage() {
 
   return (
     <div className="container mx-auto px-4">
-      <header className="py-8">
+      <header className="py-8 border border-b-2">
         {/* Your header content */}
         <h1 className="text-4xl font-bold mb-4">Your Weight Loss Solution</h1>
         <p className="mb-4">

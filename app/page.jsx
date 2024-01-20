@@ -363,6 +363,9 @@ export default function Home() {
                   width={300}
                 />
               </div>
+              <div>
+                UPI ID: <a href="arghyadipbiswas9259@sbi" className="text-blue-500">arghyadipbiswas9259@sbi</a>
+              </div>
               <div className="text-center">
                 Time remaining:{" "}
                 <strong>
