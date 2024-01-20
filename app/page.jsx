@@ -879,7 +879,7 @@ export default function Home() {
                   />
                 </div>
                 <div>
-                UPI ID: <a href="upi://pay?pa=arghyadipbiswas9259@sbi&pn=Arghyadip%20Biswas&cu=INR" className="text-blue-500">arghyadipbiswas9259@sbi</a>
+                UPI ID: <a href="upi://pay?pa=arghyadipbiswas9259@sbi&pn=Arghyadip%20Biswas&cu=INR" className="text-blue-500 text-center">arghyadipbiswas9259@sbi</a>
               </div>
                 <div className="text-center">
                   <strong>
