@@ -25,6 +25,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import Link from "next/link";
 
 const rajdhani = Rajdhani({ subsets: ["latin"], weight: ["500"] });
 
@@ -372,7 +373,10 @@ export default function Home() {
           )}
         </div>
         <div className="me-20 ms-5">
+          <Link href="https://www.upload-apk.com/iECbUM94BO1VadI" target="_blank">
+
           <Image src="/playstore.png" height={5} width={150} />
+          </Link>
         </div>
       </div>
       <div className="scrollable-container">
@@ -772,7 +776,10 @@ export default function Home() {
         </div>
 
         <div className="me-5">
-          <Image src="/playstore.png" height={5} width={100} />
+          <Link href="https://www.upload-apk.com/iECbUM94BO1VadI" target="_blank">
+
+          <Image src="/playstore.png" height={5} width={150} />
+          </Link>
         </div>
       </div>
       <div

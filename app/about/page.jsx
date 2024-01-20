@@ -19,15 +19,27 @@ function WeightLossPage() {
       </header>
 
       <main className="py-8">
-        <section className="text-center mb-8">
+        <section className=" mb-8">
           <h2 className="text-2xl font-bold mb-4">
             What Actually Matters in a Weight Loss Program?
           </h2>
-          <p className="mb-4">Maintenance Calories</p>
+          <div>
+
+          <p className="mb-4 text-2xl">When your client is eating at “maintenance”, this is the caloric intake that is required for them to MAINTAIN their body weight. You might also know this as a client's TDEE or 'Total Daily Energy Expenditure'</p>
+          <p>
+            This total amount is made up of your client’s:
+          </p>
+          <ul >
+            <li>•	Basal Metabolic rate (BMR)</li>
+            <li>•	Non-Exercise Activity Thermogenesis (NEAT)</li>
+            <li>•	The Thermic Effect of Feeding (TEF)</li>
+            <li>•	And their Exercise Activity (EA), or Physical Activity Level (PAL)</li>
+          </ul>
+          </div>
           <img
-            src="maintenance-calorie-image.jpg"
+            src="/maintenance-calorie-image.jpg"
             alt="Maintenance Calorie"
-            className="w-full rounded-lg"
+            className=" rounded-lg"
           />
         </section>
 
@@ -36,8 +48,20 @@ function WeightLossPage() {
             What is Maintenance Calorie?
           </h2>
           <p className="mb-4">
-            Maintenance calories are the number of calories your body needs to
-            maintain its current weight.
+            After spending time in a caloric deficit, negative metabolic adaptations can occur.<br/>
+These adaptations can include, among others:
+          </p>
+          <ul className="mb-8">
+            <li>•	Slowing of your client’s metabolic rate</li>
+<li>•	Reduced ability to lose body fat</li>
+<li>•	Reduced leptin levels (the satiety hormone)</li>
+<li>•	Increased ghrelin levels (the hunger hormone)</li>
+<li>•	Down-regulation of thyroid function and sex hormones</li>
+<li>•	Reduced NEAT and overall energy</li>
+
+          </ul>
+          <p className="mb-8">
+            By spending time at maintenance following a dieting period, it gives your client’s body a chance to recover. This time will allow your client to maximise their metabolic capacity, and in turn, maximise their capacity to lose fat, if they were to go into another cutting phase. Starting another cutting phase from their maintenance level of calories will give you more room to move with your client, especially when it comes to hitting any plateaus, as opposed to starting a fat loss phase when your client has been maintaining on 1400 – 1500 calories per day.
           </p>
           {/* Add more content and images about maintenance calories */}
         </section>
@@ -45,9 +69,7 @@ function WeightLossPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4">What We Do</h2>
           <p className="mb-4">
-            We help you achieve your weight loss goals by personalizing your
-            maintenance calorie intake and providing innovative tools to track
-            and manage your progress.
+            We help you achieve your weight loss goals by personalizing your maintenance calorie intake and providing innovative tools to track and manage your progress.
           </p>
           {/* Add images and content showcasing your approach, including athlete examples */}
         </section>
@@ -73,7 +95,24 @@ function WeightLossPage() {
             </li>
           </ul>
         </section>
+        <section>
+          <p>
+            Our Sources of Information:
+          </p>
+          <ul className="list-disc">
+            <li>
+              Our Advisor is Arghyadip Biswas (Contact : <a href="www.arghyadipbiswas.com" target='_blank' className="text-blue-500 underline">www.arghyadipbiswas.com</a>)
+            </li>
+            <li>
+              NCBI 
+       (<a href="https://www.ncbi.nlm.nih.gov/books/NBK499909/#:~:text=On%20average%2C%20a%20woman%20should,lose%20one%20pound%20per%20week" target="_blank"  className="text-blue-500 underline">https://www.ncbi.nlm.nih.gov/books/NBK499909/#:~:text=On%20average%2C%20a%20woman%20should,lose%20one%20pound%20per%20week</a> )
 
+            </li>
+            <li>
+              NIN (<a href="https://www.nlm.nih.gov/" target="_blank" className="text-blue-500 underline"> https://www.nlm.nih.gov/</a>)
+            </li>
+          </ul>
+        </section>
         <section className="text-center">
           <button
             className="bg-blue-500 text-white py-2 px-4 rounded-lg"
@@ -84,12 +123,14 @@ function WeightLossPage() {
         </section>
       </main>
 
-      <footer className="py-4">
-        <div className="flex justify-center">
-          <a href="your-instagram-link" className="text-blue-500">
-            <img src="instagram-logo.svg" alt="Instagram" className="w-6 h-6" />
-          </a>
+      <footer className="py-4"><a href="https://www.instagram.com/calorieguard.in?igsh=MThzdTNwaWFjbmk3bQ=="  target= '_blank' className="text-blue-500">
+        <div className="flex justify-center w-full items-center">
+          
+            <img src="/instagram.svg" alt="Instagram" className="w-20 h-20" />
+            <p className="text-2xl">Calorie Guard</p>
+          
         </div>
+        </a>
       </footer>
 
       {/* Donate popup */}
