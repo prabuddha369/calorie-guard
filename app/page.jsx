@@ -377,7 +377,7 @@ export default function Home() {
           )}
         </div>
         <div className="me-20 ms-5">
-          <Link href="https://www.upload-apk.com/iECbUM94BO1VadI" target="_blank">
+          <Link href="/beta-test">
 
           <Image src="/playstore.png" height={5} width={150} />
           </Link>
@@ -780,7 +780,7 @@ export default function Home() {
         </div>
 
         <div className="me-5">
-          <Link href="https://www.upload-apk.com/iECbUM94BO1VadI" target="_blank">
+          <Link href="/beta-test">
 
           <Image src="/playstore.png" height={5} width={150} />
           </Link>
