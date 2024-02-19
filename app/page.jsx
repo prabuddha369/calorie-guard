@@ -238,24 +238,24 @@ export default function Home() {
   const [value, setValue] = useState("");
   const ComboBox = () => {
     return (
-      <Popover open={open} onOpenChange={setOpen} className="w-full">
+      <Popover open={open} onOpenChange={setOpen} className="w-full bg-white">
         <PopoverTrigger asChild>
           <Button
             variant="outline"
             role="combobox"
             aria-expanded={open}
-            className="w-full justify-start"
+            className="w-full justify-start bg-white"
           >
             {value
               ? frameworks.find((framework) => framework.value === value)?.label
               : "Select Activity Level..."}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-[45vw] p-0">
+        <PopoverContent className="w-[45vw] p-0 bg-white p-3">
           <Command>
             <CommandInput
               placeholder="Search activity level..."
-              className="h-9"
+              className="h-9 bg-white p-1"
             />
             <CommandEmpty>No framework found.</CommandEmpty>
             <CommandGroup>
@@ -271,7 +271,7 @@ export default function Home() {
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>{framework.label}</TooltipTrigger>
-                      <TooltipContent>
+                      <TooltipContent className='bg-white p-[3px]'>
                         <p>{framework.tooltip}</p>
                       </TooltipContent>
                     </Tooltip>
