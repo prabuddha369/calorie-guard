@@ -584,7 +584,7 @@ export default function Home() {
             at Your Finger Tips
             <br />
             <br />
-            <strong className="text-xl">Comming soon....</strong>
+            <strong className="text-xl"></strong>
           </h2>
         </div>
         <div className="text-black flex flex-row items-center mt-10">
@@ -598,7 +598,7 @@ export default function Home() {
             at Your Finger Tips
             <br />
             <br />
-            <strong className="text-xl">Comming soon....</strong>
+            <strong className="text-xl"></strong>
           </h2>
           <Image src="/lens.png" height={300} width={260} alt="App View" />
         </div>
@@ -1088,7 +1088,7 @@ export default function Home() {
                 Data at Your Finger Tips
                 <br />
                 <br />
-                <strong className="text-xl">Comming soon....</strong>
+                <strong className="text-xl"></strong>
               </h2>
             </div>
             <div className="text-black flex flex-row items-center pt-10 bg-[#FFFFFF90]">
@@ -1100,7 +1100,7 @@ export default function Home() {
                 at Your Finger Tips
                 <br />
                 <br />
-                <strong className="text-xl">Comming soon....</strong>
+                <strong className="text-xl"></strong>
               </h2>
               <Image
                 src="/lens.png"
