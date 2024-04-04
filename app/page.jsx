@@ -355,7 +355,7 @@ export default function Home() {
                 <strong>SCAN to PAY</strong>
                 <Image src="/UPI.png" width={100} height={20} />
               </div>
-              
+
               <div>
                 <Image
                   src="/scanner.jpg"
@@ -379,7 +379,7 @@ export default function Home() {
         <div className="me-20 ms-5">
           <Link href="/beta-test">
 
-          <Image src="/playstore.png" height={5} width={150} />
+            <Image src="/playstore.png" height={5} width={150} />
           </Link>
         </div>
       </div>
@@ -584,7 +584,6 @@ export default function Home() {
             at Your Finger Tips
             <br />
             <br />
-            <strong className="text-xl"></strong>
           </h2>
         </div>
         <div className="text-black flex flex-row items-center mt-10">
@@ -598,7 +597,7 @@ export default function Home() {
             at Your Finger Tips
             <br />
             <br />
-            <strong className="text-xl"></strong>
+
           </h2>
           <Image src="/lens.png" height={300} width={260} alt="App View" />
         </div>
@@ -782,7 +781,7 @@ export default function Home() {
         <div className="me-5">
           <Link href="/beta-test">
 
-          <Image src="/playstore.png" height={5} width={150} />
+            <Image src="/playstore.png" height={5} width={150} />
           </Link>
         </div>
       </div>
@@ -835,12 +834,15 @@ export default function Home() {
 
         <div className="relative">
           <div className="absolute top-0 text-black w-[80%] bg-white ms-10 mt-5 flex flex-row justify-between items-center border rounded-xl">
+          <Link href="upi://pay?pa=arghyadipbiswas9259@sbi&pn=Arghyadip%20Biswas&cu=INR"
+                className="ms-10 text-center">
             <div
-              className="ms-10 bg-orange-700 text-white p-5"
-              onClick={handleDivClick}
+              className="bg-orange-700 text-white p-5"
+              // onClick={handleDivClick}
             >
-              DONATE NOW
-            </div>
+                DONATE NOW
+                </div>
+              </Link>
             <div className="felx flex-col me-5 py-5">
               <img
                 width="44"
@@ -879,8 +881,8 @@ export default function Home() {
                   />
                 </div>
                 <div className="text-center">
-                UPI ID: <a href="upi://pay?pa=arghyadipbiswas9259@sbi&pn=Arghyadip%20Biswas&cu=INR" className="text-blue-500 text-center">arghyadipbiswas9259@sbi</a>
-              </div>
+                  UPI ID: <a href="upi://pay?pa=arghyadipbiswas9259@sbi&pn=Arghyadip%20Biswas&cu=INR" className="text-blue-500 text-center">arghyadipbiswas9259@sbi</a>
+                </div>
                 <div className="text-center">
                   <strong>
                     SCAN & PAY
@@ -888,7 +890,7 @@ export default function Home() {
                     or
                   </strong>
                 </div>
-                
+
                 <div className="text-center">
                   <button
                     onClick={handleDownload}
@@ -1088,7 +1090,7 @@ export default function Home() {
                 Data at Your Finger Tips
                 <br />
                 <br />
-                <strong className="text-xl"></strong>
+
               </h2>
             </div>
             <div className="text-black flex flex-row items-center pt-10 bg-[#FFFFFF90]">
@@ -1100,7 +1102,7 @@ export default function Home() {
                 at Your Finger Tips
                 <br />
                 <br />
-                <strong className="text-xl"></strong>
+
               </h2>
               <Image
                 src="/lens.png"

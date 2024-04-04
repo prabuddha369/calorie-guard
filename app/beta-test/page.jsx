@@ -9,20 +9,20 @@ const rajdhani = Rajdhani({ subsets: ["latin"], weight: ["500"] });
 const page = () => {
   const router = useRouter()
   return (
-    <div className={`px-4 flex items-center justify-center w-full h-screen ${rajdhani.className} gap-10 text-4xl flex-col bg-[#F8F8FF]`}>
+    <div className={`px-4 flex text-center items-center justify-center w-full h-screen ${rajdhani.className} gap-10 text-2xl md:text-4xl flex-col bg-[#F8F8FF]`}>
     <Image
       src='/logo.png'
       height={100}
       width={150}
       className='p-2 rounded-3xl shadow-xl bg-[#FAF9F6]'
     />
-        Coming Soon on 
+        Available to Beta Testers on
         <Image
           src="/playstore.png"
           height={5} width={150} 
         />
-        <p>
-          For early access sign up for our <strong>Beta Test Programme</strong>
+        <p className='text-base md:text-4xl'>
+          For early access sign up for our <br/><strong>Beta Test Programme</strong>
         </p>
         <Link href='https://forms.gle/RdZBWhehhhK2vQHc6' target='_blank' onClick={()=>router.push('/')}>
         <Button className='bg-[#0d0d0d] text-3xl text-white rounded-md'>Sign Up!</Button>
