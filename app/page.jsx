@@ -185,34 +185,36 @@ export default function Home() {
 
   const handleCalculate = (activity) => {
     // Calculate maintenance calorie using the provided formula
-    let BMR = calculateMaintenanceCalorie() * 1.15;
+    let BMR = calculateBMR();
+    let TEF = 0.1 * BMR;
+    let TEE; 
     switch (activity) {
       case "sedentary":
-        BMR *= 1.2;
+        TEE = BMR * 0.2;
         break;
       case "lightly-active":
-        BMR *= 1.375;
+        TEE = BMR * 0.375;
         break;
       case "moderately-active":
-        BMR *= 1.55;
+        TEE = BMR * 0.55;
         break;
       case "very-active":
-        BMR *= 1.725;
+        TEE =BMR * 0.725;
         break;
       case "extra-active":
-        BMR *= 1.9;
+        TEE = BMR * 0.9;
         break;
       default:
         break;
     }
-    const calculatedResultRounded = Math.round(BMR);
+    const calculatedResultRounded = Math.round(BMR+TEF+TEE);
     setCalculatedValue(calculatedResultRounded);
   };
 
-  const calculateMaintenanceCalorie = () => {
+  const calculateBMR = () => {
     return gender === "male"
-      ? 66.47 + 13.75 * weight + 5.003 * height - 6.755 * age
-      : 655.1 + 9.563 * weight + 1.85 * height - 4.676 * age;
+      ? (10 * weight + 6.25 * height - 5 * age) + 5
+      : (10 * weight + 6.25 * height - 5 * age) - 161;
   };
 
   const Typewriter = ({ text, delay }) => {
