@@ -3,6 +3,9 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ImQuotesLeft } from "react-icons/im";
 import { ImQuotesRight } from "react-icons/im";
+import { Sheet, SheetContent, SheetTrigger } from "../components/ui/sheet";
+import { Separator } from "../components/ui/separator";
+import NavItems from "../components/shared/NavItems";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { Rajdhani } from "next/font/google";
 import {
@@ -77,6 +80,8 @@ export default function Home() {
   const [weight, setWeight] = useState(60);
   const [gender, setGender] = useState("male"); // Default to male
   const [calculatedValue, setCalculatedValue] = useState(0);
+  
+  const [isOpenS, setOpenS] = useState(false);
 
   const handleDownload = () => {
     const imageUrl = "/scanner.jpg"; // Replace with the actual path or URL of your image
@@ -187,7 +192,7 @@ export default function Home() {
     // Calculate maintenance calorie using the provided formula
     let BMR = calculateBMR();
     let TEF = 0.1 * BMR;
-    let TEE; 
+    let TEE;
     switch (activity) {
       case "sedentary":
         TEE = BMR * 0.2;
@@ -199,7 +204,7 @@ export default function Home() {
         TEE = BMR * 0.55;
         break;
       case "very-active":
-        TEE =BMR * 0.725;
+        TEE = BMR * 0.725;
         break;
       case "extra-active":
         TEE = BMR * 0.9;
@@ -207,7 +212,7 @@ export default function Home() {
       default:
         break;
     }
-    const calculatedResultRounded = Math.round(BMR+TEF+TEE);
+    const calculatedResultRounded = Math.round(BMR + TEF + TEE);
     setCalculatedValue(calculatedResultRounded);
   };
 
@@ -299,7 +304,24 @@ export default function Home() {
             animation: "glide 1s forwards",
           }}
         >
-          <Image src="/logo.png" alt="logo" width={80} height={80} />
+          <Sheet open={isOpenS} onOpenChange={setOpenS}>
+            <SheetTrigger className="align-middle">
+              <Image src="/logo.png" alt="logo" width={80} height={80} />
+            </SheetTrigger>
+            <SheetContent
+              className="flex flex-col bg-white w-[1/3] "
+              side={"left"}
+            >
+              <div className="flex gap-5 place-items-center">
+                <Image src="/logo.png" alt="logo" width={50} height={50} />
+                <span className="text-2xl font-semibold">
+                  Calorie Guard Calculators
+                </span>
+              </div>
+              <Separator className="border border-gray-50/80" />
+              <NavItems setOpen={setOpenS} />
+            </SheetContent>
+          </Sheet>
           <div className="text-black text-3xl font-bold">
             <h1>
               <Typewriter text="Calorie Guard" delay={300} />
@@ -836,15 +858,15 @@ export default function Home() {
 
         <div className="relative">
           <div className="absolute top-0 text-black w-[80%] bg-white ms-10 mt-5 flex flex-row justify-between items-center border rounded-xl">
-          <Link href="upi://pay?pa=arghyadipbiswas9259@sbi&pn=Arghyadip%20Biswas&cu=INR"
-                className="ms-10 text-center">
-            <div
-              className="bg-orange-700 text-white p-5"
+            <Link href="upi://pay?pa=arghyadipbiswas9259@sbi&pn=Arghyadip%20Biswas&cu=INR"
+              className="ms-10 text-center">
+              <div
+                className="bg-orange-700 text-white p-5"
               // onClick={handleDivClick}
-            >
+              >
                 DONATE NOW
-                </div>
-              </Link>
+              </div>
+            </Link>
             <div className="felx flex-col me-5 py-5">
               <img
                 width="44"
