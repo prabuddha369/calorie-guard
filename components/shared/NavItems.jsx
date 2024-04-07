@@ -2,7 +2,7 @@ import { calculators } from '../../constants'
 import Link from 'next/link'
 import React from 'react'
 
-const NavItems = (props:any) => {
+const NavItems = (props) => {
     return (
         <ul className="items-center justify-between flex w-full flex-col gap-5  text-sm md:px-20">
             <li className='text-2xl'>

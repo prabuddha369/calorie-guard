@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
-import {calculateBmr} from "../utils"
+import {calculateBmr} from "./utils"
 import { useEffect, useState } from "react";
 import { ImQuotesLeft } from "react-icons/im";
 import { ImQuotesRight } from "react-icons/im";
 import { Sheet, SheetContent, SheetTrigger } from "../components/ui/sheet";
 import { Separator } from "../components/ui/separator";
 import NavItems from "../components/shared/NavItems";
+import Header from "../components/shared/Header";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { Rajdhani } from "next/font/google";
 import {
@@ -30,37 +31,10 @@ import {
   PopoverTrigger,
 } from "../components/ui/popover";
 import Link from "next/link";
-
+import { frameworks } from "../constants";
 const rajdhani = Rajdhani({ subsets: ["latin"], weight: ["500"] });
 
 export default function Home() {
-  const frameworks = [
-    {
-      value: "sedentary",
-      label: "Sedentary",
-      tooltip: "<3000 steps per day",
-    },
-    {
-      value: "lightly-active",
-      label: "Lightly Active",
-      tooltip: "3000-5000 steps per day",
-    },
-    {
-      value: "moderately-active",
-      label: "Moderately Active",
-      tooltip: "5000-8000 steps per day",
-    },
-    {
-      value: "very-active",
-      label: "Very Active",
-      tooltip: "8000-12000 steps per day",
-    },
-    {
-      value: "extra-active",
-      label: "Extra Active",
-      tooltip: ">12000 steps per day",
-    },
-  ];
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -81,8 +55,6 @@ export default function Home() {
   const [weight, setWeight] = useState(60);
   const [gender, setGender] = useState("male"); // Default to male
   const [calculatedValue, setCalculatedValue] = useState(0);
-  
-  const [isOpenS, setOpenS] = useState(false);
 
   const handleDownload = () => {
     const imageUrl = "/scanner.jpg"; // Replace with the actual path or URL of your image
@@ -191,7 +163,7 @@ export default function Home() {
 
   const handleCalculate = (activity) => {
     // Calculate maintenance calorie using the provided formula
-    let BMR = calculateBmr();
+    let BMR = calculateBmr(gender, weight, age, height);
     let TEF = 0.1 * BMR;
     let TEE;
     switch (activity) {
@@ -217,53 +189,28 @@ export default function Home() {
     setCalculatedValue(calculatedResultRounded);
   };
 
-  // const calculateBMR = () => {
-  //   return gender === "male"
-  //     ? (10 * weight + 6.25 * height - 5 * age) + 5
-  //     : (10 * weight + 6.25 * height - 5 * age) - 161;
-  // };
-
-  const Typewriter = ({ text, delay }) => {
-    const [currentText, setCurrentText] = useState("");
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    useEffect(() => {
-      let timeout;
-
-      if (currentIndex < text.length) {
-        timeout = setTimeout(() => {
-          setCurrentText((prevText) => prevText + text[currentIndex]);
-          setCurrentIndex((prevIndex) => prevIndex + 1);
-        }, delay);
-      }
-
-      return () => clearTimeout(timeout);
-    }, [currentIndex, delay, text]);
-
-    return <span>{currentText}</span>;
-  };
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
   const ComboBox = () => {
     return (
-      <Popover open={open} onOpenChange={setOpen} className="w-full bg-white">
+      <Popover open={open} onOpenChange={setOpen} className="w-full">
         <PopoverTrigger asChild>
           <Button
             variant="outline"
             role="combobox"
             aria-expanded={open}
-            className="w-full justify-start bg-white"
+            className="w-full justify-start"
           >
             {value
               ? frameworks.find((framework) => framework.value === value)?.label
               : "Select Activity Level..."}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-[45vw] p-0 bg-white p-3">
+        <PopoverContent className="w-[45vw] p-3">
           <Command>
             <CommandInput
               placeholder="Search activity level..."
-              className="h-9 bg-white p-1"
+              className="h-9 p-1"
             />
             <CommandEmpty>No framework found.</CommandEmpty>
             <CommandGroup>
@@ -279,7 +226,7 @@ export default function Home() {
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>{framework.label}</TooltipTrigger>
-                      <TooltipContent className='bg-white p-[3px]'>
+                      <TooltipContent className='p-[3px]'>
                         <p>{framework.tooltip}</p>
                       </TooltipContent>
                     </Tooltip>
@@ -294,120 +241,6 @@ export default function Home() {
   };
   return windowWidth >= 768 ? (
     <main className="h-screen w-screen bg-cover bg-center bg-white overflow-hidden relative">
-      <div
-        className="flex flex-row w-screen h-fit justify-start items-center"
-        style={{ boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" }}
-      >
-        <div
-          className={`logo-container ${animationClass} m-5 w-[30%] flex gap-4 text-black flex-row items-center`}
-          style={{
-            overflow: "hidden",
-            animation: "glide 1s forwards",
-          }}
-        >
-          <Sheet open={isOpenS} onOpenChange={setOpenS}>
-            <SheetTrigger className="align-middle">
-              <Image src="/logo.png" alt="logo" width={80} height={80} />
-            </SheetTrigger>
-            <SheetContent
-              className="flex flex-col bg-white w-[1/3] "
-              side={"left"}
-            >
-              <div className="flex gap-5 place-items-center">
-                <Image src="/logo.png" alt="logo" width={50} height={50} />
-                <span className="text-2xl font-semibold">
-                  Calorie Guard Calculators
-                </span>
-              </div>
-              <Separator className="border border-gray-50/80" />
-              <NavItems setOpen={setOpenS} />
-            </SheetContent>
-          </Sheet>
-          <div className="text-black text-3xl font-bold">
-            <h1>
-              <Typewriter text="Calorie Guard" delay={300} />
-            </h1>
-          </div>
-        </div>
-
-        <div
-          style={{
-            position: "fixed",
-            top: "0",
-            left: "0",
-            width: "100%",
-            height: "100%",
-            background: "rgba(0, 0, 0, 0.5)", // semi-transparent black overlay
-            zIndex: isDivOpen ? "999" : "-1", // show overlay only when isDivOpen is true
-            display: isDivOpen ? "block" : "none", // hide overlay when isDivOpen is false
-          }}
-        ></div>
-
-        <div
-          className="text-black w-[10%] mt-5 ms-[40%] flex flex-col justify-center items-center"
-          onClick={handleDivClick}
-          style={{ cursor: "pointer" }}
-        >
-          <img
-            width="44"
-            height="44"
-            src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-early-bird-cyber-monday-flaticons-flat-flat-icons.png"
-            alt="external-early-bird-cyber-monday-flaticons-flat-flat-icons"
-          />
-          <p>Donate Now</p>
-          <p>Support Us</p>
-
-          {isDivOpen && (
-            <div
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                background: "white",
-                padding: "20px",
-                boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
-                zIndex: 999,
-              }}
-            >
-              <span
-                style={{ float: "right", cursor: "pointer" }}
-                onClick={handleCloseClick}
-              >
-                &#10006;
-              </span>
-              <div className="text-center">
-                <strong>SCAN to PAY</strong>
-                <Image src="/UPI.png" width={100} height={20} />
-              </div>
-
-              <div>
-                <Image
-                  src="/scanner.jpg"
-                  alt="Payment Scanner"
-                  height={300}
-                  width={300}
-                />
-              </div>
-              <div className="text-center">
-                UPI ID: <a href="upi://pay?pa=arghyadipbiswas9259@sbi&pn=Arghyadip%20Biswas&cu=INR" className="text-blue-500 text-center">arghyadipbiswas9259@sbi</a>
-              </div>
-              <div className="text-center">
-                Time remaining:{" "}
-                <strong>
-                  {formatTime(minutes)}:{formatTime(seconds)}
-                </strong>
-              </div>
-            </div>
-          )}
-        </div>
-        <div className="me-20 ms-5">
-          <Link href="/beta-test">
-
-            <Image src="/playstore.png" height={5} width={150} />
-          </Link>
-        </div>
-      </div>
       <div className="scrollable-container">
         <div
           className="absolute right-64 transform translate-x-full"
@@ -489,14 +322,14 @@ export default function Home() {
           </div>
           <a
             href="/about"
-            className="absolute bottom-5 text-black text-blue-700 text-[10px] flex flex-row gap-2"
+            className="absolute bottom-5 text-blue-700 text-[10px] flex flex-row gap-2"
           >
             <p>Know More </p>
             <FaExternalLinkAlt size={10} />
           </a>
         </div>
         <section
-          className="calorie-section mt-10 p-10 w-[50%] ms-40 mt-40 mb-20 rounded-xl text-black"
+          className="calorie-section p-10 w-[50%] ms-40 mt-40 mb-20 rounded-xl text-black"
           style={{
             boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
             background: "linear-gradient(to bottom, transparent, skyblue)",
@@ -612,7 +445,7 @@ export default function Home() {
           </h2>
         </div>
         <div className="text-black flex flex-row items-center mt-10">
-          <h2 className="ms-32 text-3xl ms-10 font-bold me-5">
+          <h2 className="ms-32 text-3xl font-bold me-5">
             Scan your Foods
             <br />
             <br />
@@ -786,30 +619,6 @@ export default function Home() {
     </main>
   ) : (
     <main className="h-full w-screen bg-cover bg-center bg-white overflow-hidden relative">
-      <div
-        className="flex flex-row w-screen h-fit justify-start items-center"
-        style={{ boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" }}
-      >
-        <div
-          className={`logo-container ${animationClass} m-5 w-[70%] flex text-black flex-row items-center`}
-          style={{
-            overflow: "hidden",
-            animation: "glide 1s forwards",
-          }}
-        >
-          <Image src="/logo.png" alt="logo" width={50} height={50} />
-          <div className="text-black ms-5 w-full text-xl font-bold">
-            <Typewriter text="Calorie Guard" delay={200} />
-          </div>
-        </div>
-
-        <div className="me-5">
-          <Link href="/beta-test">
-
-            <Image src="/playstore.png" height={5} width={150} />
-          </Link>
-        </div>
-      </div>
       <div
         className="absolute right-64 transform translate-x-full"
         style={{
@@ -992,7 +801,7 @@ export default function Home() {
             </div>
             <a
               href="/about"
-              className="absolute bottom-5 left-10 text-black text-blue-700 text-[10px] flex flex-row gap-2"
+              className="absolute bottom-5 left-10  text-blue-700 text-[10px] flex flex-row gap-2"
             >
               <p>Know More </p>
               <FaExternalLinkAlt size={10} />
@@ -1002,7 +811,7 @@ export default function Home() {
 
         <div className="relative px-5">
           <section
-            className="absolute top-[55vh] mt-10 p-10 w-[90%] mt-40 mb-20 rounded-xl text-black bg-[#97CD9980]"
+            className="absolute top-[55vh] p-10 w-[90%] mt-40 mb-20 rounded-xl text-black bg-[#97CD9980]"
             style={{ boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)" }}
           >
             <h2 className="text-2xl font-bold mb-5">
@@ -1078,7 +887,7 @@ export default function Home() {
               </button>
             </div>
 
-            <div className="mt-4 text-xl text-center mt-10">
+            <div className="text-xl text-center mt-10">
               <strong>
                 Maintenance Calories
                 <br />

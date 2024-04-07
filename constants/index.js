@@ -34,16 +34,16 @@ export const frameworks = [
       tooltip: "Basal Metabolic Rate",
     },
     {
-      value: "tdee",
-      label: "TDEE Calculator",
-      route: "/calculators/tdee",
-      tooltip: "Total Daily Energy Expenditure",
-    },
-    {
       value: "bmi",
       label: "BMI Calculator",
       route: "/calculators/bmi",
       tooltip: "Body Mass Index",
+    },
+    {
+      value: "fat",
+      label: "Fat Calculator",
+      route: "/calculators/fat",
+      tooltip: "Body Fat Percentage",
     },
   ];
   

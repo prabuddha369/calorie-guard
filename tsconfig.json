@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/shared/NavItems.jsx"  ],
   "exclude": [
     "node_modules"
   ]
