@@ -74,3 +74,11 @@
       @apply bg-background text-foreground;
     }
   }
+  .gender-option {
+    cursor: pointer;
+    padding: 8px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
