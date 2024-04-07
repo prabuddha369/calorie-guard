@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import {calculateBmr} from "../utils"
 import { useEffect, useState } from "react";
 import { ImQuotesLeft } from "react-icons/im";
 import { ImQuotesRight } from "react-icons/im";
@@ -13,21 +14,21 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "../components/ui/tooltip";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/button";
 import {
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
-} from "@/components/ui/command";
+} from "../components/ui/command";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
+} from "../components/ui/popover";
 import Link from "next/link";
 
 const rajdhani = Rajdhani({ subsets: ["latin"], weight: ["500"] });
@@ -190,7 +191,7 @@ export default function Home() {
 
   const handleCalculate = (activity) => {
     // Calculate maintenance calorie using the provided formula
-    let BMR = calculateBMR();
+    let BMR = calculateBmr();
     let TEF = 0.1 * BMR;
     let TEE;
     switch (activity) {
@@ -216,11 +217,11 @@ export default function Home() {
     setCalculatedValue(calculatedResultRounded);
   };
 
-  const calculateBMR = () => {
-    return gender === "male"
-      ? (10 * weight + 6.25 * height - 5 * age) + 5
-      : (10 * weight + 6.25 * height - 5 * age) - 161;
-  };
+  // const calculateBMR = () => {
+  //   return gender === "male"
+  //     ? (10 * weight + 6.25 * height - 5 * age) + 5
+  //     : (10 * weight + 6.25 * height - 5 * age) - 161;
+  // };
 
   const Typewriter = ({ text, delay }) => {
     const [currentText, setCurrentText] = useState("");
