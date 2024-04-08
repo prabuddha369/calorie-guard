@@ -281,7 +281,7 @@ const page = () => {
         <h2 className="text-[16px] md:text-[22px] font-bold py-3">
           Body fat percentage (BFP) formula for males:
         </h2>
-        <div className="text-[10px] md:text-lg">
+        <div className="text-[9px] md:text-lg">
           <Latex displayMode={true}>
             {`$$BFP =\\frac{495}{1.0324 - 0.19077 \\times \\log_{10}(waist - neck) + 0.15456 \\times \\log_{10}(height)} - 450$$`}
           </Latex>
@@ -289,7 +289,7 @@ const page = () => {
         <h2 className="text-[16px] md:text-[22px] font-bold py-3">
           Body fat percentage (BFP) formula for females:
         </h2>
-        <div className="text-[10px] md:text-lg">
+        <div className="text-[9px] md:text-lg flex flex-wrap w-[90%]">
           <Latex displayMode={true}>
             {`$$BFP =\\frac{495}{1.29579  - 0.35004 \\times \\log_{10}(waist+hip-neck) +  0.22100 \\times \\log_{10}(height)} - 450$$`}
           </Latex>
@@ -319,7 +319,7 @@ const page = () => {
         <p>
           Another method for calculating an estimate of body fat percentage uses
           BMI. Refer to the{" "}
-          <Link href={"/calculators/bmi"}>BMI Calculator</Link> to obtain an
+          <Link href={"/calculators/bmi"} className= 'hover:underline text-blue-500'>BMI Calculator</Link> to obtain an
           estimate of BMI for use with the BMI method, as well as further detail
           on how BMI is calculated, its implications, and its limitations.
           Briefly, the estimation of BMI involves the use of formulas that

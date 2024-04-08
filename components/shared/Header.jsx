@@ -87,7 +87,7 @@ const Header = () => {
             <NavItems setOpen={setOpenS} />
           </SheetContent>
         </Sheet>
-        <div className="text-black text-3xl font-bold">
+        <div className="text-black text-xl md:text-3xl font-bold">
           <h1>
             <Typewriter text="Calorie Guard" delay={300} />
           </h1>
@@ -171,7 +171,7 @@ const Header = () => {
           </div>
         )}
       </div>
-      <div className=" ms-5">
+      <div className="me-2 ms-5">
         <Link href="https://play.google.com/store/apps/details?id=com.calorieguard.calorieguard" target="_blank">
           <Image src="/playstore.png" height={5} width={150} />
         </Link>
