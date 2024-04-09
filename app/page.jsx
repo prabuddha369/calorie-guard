@@ -190,7 +190,7 @@ export default function Home() {
   };
 
   const [open, setOpen] = useState(false);
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState("sedentary");
   const ComboBox = () => {
     return (
       <Popover open={open} onOpenChange={setOpen} className="w-full">
