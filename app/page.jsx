@@ -240,8 +240,8 @@ export default function Home() {
     );
   };
   return windowWidth >= 768 ? (
-    <main className="h-screen w-screen bg-cover bg-center bg-white overflow-hidden relative">
-      <div className="scrollable-container">
+    <main className="h-screen w-full bg-cover bg-center bg-white overflow-hidden relative">
+      <div className="scrollable-container w-full">
         <div
           className="absolute right-64 transform translate-x-full"
           style={{
@@ -481,6 +481,7 @@ export default function Home() {
           overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
           -ms-overflow-style: none;  /* IE and Edge */
           scrollbar-width: none;  /* Firefox */
+          overflow-x: hidden;
         }
         .scrollable-container::-webkit-scrollbar {
           display: none;
