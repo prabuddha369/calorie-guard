@@ -477,8 +477,13 @@ export default function Home() {
 
       <style jsx>{`
         .scrollable-container {
-          max-height: 80vh; /* Set the maximum height as needed */
+          max-height: 100vh; /* Set the maximum height as needed */
           overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+        }
+        .scrollable-container::-webkit-scrollbar {
+          display: none;
         }
 
         @keyframes glide {
