@@ -24,19 +24,15 @@ const page = () => {
     setCalculatedValue(BMI);
   };
   return (
-      <div className="pt-10 w-[100%] flex flex-col items-center justify-center gap-10">
+      <div className="pt-10 w-[100%] flex flex-col items-center justify-center gap-10 bg-gradient-to-br from-[#17191B] to-[#353A40]">
         <section
-          className="p-10 w-[95%] md:w-[50%] rounded-xl text-black flex flex-col items-center justify-center md:flex-row gap-10"
-          style={{
-            boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
-            background: "linear-gradient(to bottom, transparent, skyblue)",
-          }}
+          className="p-10 w-[95%] md:w-[50%] rounded-xl text-black flex flex-col items-center justify-center md:flex-row gap-10 bg-gradient-to-bl from-[#2df1fe] to-[#094672]"
         >
           <div className="w-full flex flex-col">
             <h2 className="text-sm font-bold mb-5">
               Calculate Your Basal Metabolic Index
             </h2>
-            <div className="flex flex-col">
+            <div className="flex flex-col text-[#333]">
               <label htmlFor="age" className="mb-1">
                 Age:
               </label>

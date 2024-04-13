@@ -19,7 +19,7 @@ const Typewriter = ({ text, delay }) => {
       return () => clearTimeout(timeout);
     }, [currentIndex, delay, text]);
 
-    return <span>{currentText}</span>;
+    return <span >{currentText}</span>;
   };
 
 export default Typewriter

@@ -29,19 +29,15 @@ const page = () => {
     setCalculatedValue(BFP.toFixed(2));
   };
   return (
-    <div className="pt-10 w-[100%] flex flex-col items-center justify-center gap-10">
+    <div className="pt-10 w-[100%] flex flex-col items-center justify-center gap-10 bg-gradient-to-br from-[#17191B] to-[#353A40]">
       <section
-        className="p-10 w-[95%] md:w-[50%] rounded-xl text-black flex flex-col items-center justify-center md:flex-row gap-10"
-        style={{
-          boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
-          background: "linear-gradient(to bottom, transparent, skyblue)",
-        }}
+        className="p-10 w-[95%] md:w-[50%] rounded-xl text-black flex flex-col items-center justify-center md:flex-row gap-10 bg-gradient-to-bl from-[#2df1fe] to-[#094672]"
       >
         <div className="w-full flex flex-col">
           <h2 className="text-sm font-bold mb-5">
             Calculate Your Body Fat Percentage
           </h2>
-          <div className="flex flex-col">
+          <div className="flex flex-col text-[#333]">
             <label htmlFor="age" className="mb-1">
               Age:
             </label>
@@ -242,7 +238,7 @@ const page = () => {
           <Link
             href="https://www.calculator.net/pdf/navy-physical-readiness-program.pdf"
             target="_blank"
-            className="hover:underline text-blue-500 p-2"
+            className="hover:underline text-sky-500 p-2"
           >
             U.S. Navy Method:
           </Link>
@@ -319,7 +315,7 @@ const page = () => {
         <p>
           Another method for calculating an estimate of body fat percentage uses
           BMI. Refer to the{" "}
-          <Link href={"/calculators/bmi"} className= 'hover:underline text-blue-500'>BMI Calculator</Link> to obtain an
+          <Link href={"/calculators/bmi"} className= 'hover:underline text-sky-500'>BMI Calculator</Link> to obtain an
           estimate of BMI for use with the BMI method, as well as further detail
           on how BMI is calculated, its implications, and its limitations.
           Briefly, the estimation of BMI involves the use of formulas that

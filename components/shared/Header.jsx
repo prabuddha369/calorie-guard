@@ -59,8 +59,8 @@ const Header = () => {
   const [isOpenS, setOpenS] = useState(false);
   return (
     <div
-      className="flex flex-row w-full h-fit justify-start items-center"
-      style={{ boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" }}
+      className="flex flex-row w-full h-fit justify-start items-center text-[#F4F7FD] bg-gradient-to-br from-[#17191B] to-[#353A40]"
+      
     >
       <div
         className={`logo-container ${animationClass} m-5 w-[70%] md:w-[30%] flex gap-4 text-black flex-row items-center`}
@@ -74,7 +74,7 @@ const Header = () => {
             <Image src="/logo.png" alt="logo" width={50} height={50} className="md:w-[80px] md:h-[80px]" />
           </SheetTrigger>
           <SheetContent
-            className="flex flex-col bg-white w-[1/3] "
+            className="flex flex-col bg-gradient-to-br from-[#17191B] to-[#353A40] w-[1/3] "
             side={"left"}
           >
             <div className="flex gap-5 place-items-center">

@@ -7,12 +7,14 @@ const ReactSpeedometer = dynamic(() => import("react-d3-speedometer"), {
 });
 const BMISpeedometer = ({value}) => {
     return (
-        <div className="px-2">
+        <div className="px-2 text-[#F4F7FD]">
           <ReactSpeedometer
             height={200}
             width={338}
+            textColor="#F4F7FD"
             maxValue={50}
-            needleColor="steelblue"
+            needleColor="#F4F7FD"
+            needleTransitionDuration={2000}
             minValue={0}
             needleHeightRatio={.8}
             customSegmentStops={[0, 16, 17, 18.5, 25, 30, 35, 40, 50]}
@@ -31,6 +33,7 @@ const BMISpeedometer = ({value}) => {
             customSegmentLabels={[
               {
                 text: "Underweight",
+                textColor:"#F4F7FD",
                 position: CustomSegmentLabelPosition.Outside,
                 fontSize: "15",
                 color: "#555",

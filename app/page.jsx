@@ -4,10 +4,6 @@ import {calculateBmr} from "./utils"
 import { useEffect, useState } from "react";
 import { ImQuotesLeft } from "react-icons/im";
 import { ImQuotesRight } from "react-icons/im";
-import { Sheet, SheetContent, SheetTrigger } from "../components/ui/sheet";
-import { Separator } from "../components/ui/separator";
-import NavItems from "../components/shared/NavItems";
-import Header from "../components/shared/Header";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { Rajdhani } from "next/font/google";
 import {
@@ -193,24 +189,24 @@ export default function Home() {
   const [value, setValue] = useState("sedentary");
   const ComboBox = () => {
     return (
-      <Popover open={open} onOpenChange={setOpen} className="w-full">
+      <Popover open={open} onOpenChange={setOpen} className="w-full text-[#333] ">
         <PopoverTrigger asChild>
           <Button
             variant="outline"
             role="combobox"
             aria-expanded={open}
-            className="w-full justify-start"
+            className="w-full justify-start text-[#333] "
           >
             {value
               ? frameworks.find((framework) => framework.value === value)?.label
               : "Select Activity Level..."}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-[45vw] p-3">
+        <PopoverContent className="w-[45vw] p-3 text-[#333] ">
           <Command>
             <CommandInput
               placeholder="Search activity level..."
-              className="h-9 p-1"
+              className="h-9 p-1 text-[#333] "
             />
             <CommandEmpty>No framework found.</CommandEmpty>
             <CommandGroup>
@@ -218,6 +214,7 @@ export default function Home() {
                 <CommandItem
                   key={framework.value}
                   value={framework.value}
+                  className="text-[#333] "
                   onSelect={(currentValue) => {
                     setValue(currentValue === value ? "" : currentValue);
                     setOpen(false);
@@ -226,8 +223,8 @@ export default function Home() {
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>{framework.label}</TooltipTrigger>
-                      <TooltipContent className='p-[3px]'>
-                        <p>{framework.tooltip}</p>
+                      <TooltipContent className='p-[3px] '>
+                        <p className="text-[#333] ">{framework.tooltip}</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -240,7 +237,7 @@ export default function Home() {
     );
   };
   return windowWidth >= 768 ? (
-    <main className="h-screen w-full bg-cover bg-center bg-white overflow-hidden relative">
+    <main className="h-screen w-full bg-cover bg-center bg-gradient-to-br from-[#17191B] to-[#353A40] overflow-hidden relative ">
       <div className="scrollable-container w-full">
         <div
           className="absolute right-64 transform translate-x-full"
@@ -260,22 +257,22 @@ export default function Home() {
             }}
           />
         </div>
-        <blockquote className="relative quote w-[70%] h-fit ms-[7%] mt-20 bg-[#bfebf5]">
+        <blockquote className="relative quote w-[70%] h-fit ms-[7%] mt-20 bg-gradient-to-bl from-[#2df1fe] to-[#094672] ">
           <ImQuotesLeft size={30} />
           <p className="p-5 ps-14">
-            The dream that everyone seeks – A life without medicine. The world
+            The dream that everyone seeks - A life without medicine. The world
             will be a better place if that happens!
           </p>
           <ImQuotesRight size={30} className="absolute right-5 bottom-5" />
         </blockquote>
         <div className="w-screen flex justify-center">
-          <Image src="/down.gif" height={60} width={60} className="me-40" />
+          <Image src="/down.gif" height={60} width={60} className="me-40 invert mt-6" />
         </div>
         <div
-          className="relative ms-20 mt-20 h-[60vh] w-[70%] bg-white text-white rounded-3xl p-10"
+          className="relative ms-20 mt-20 h-[60vh] w-[70%]  text-white rounded-3xl p-10"
           style={{ boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)" }}
         >
-          <div className="slideshow-container text-black">
+          <div className="slideshow-container">
             <div className="mySlides fade">
               <div className="text">What we do?</div>
               <div className="w-full flex justify-center">
@@ -329,16 +326,13 @@ export default function Home() {
           </a>
         </div>
         <section
-          className="calorie-section p-10 w-[50%] ms-40 mt-40 mb-20 rounded-xl text-black"
-          style={{
-            boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
-            background: "linear-gradient(to bottom, transparent, skyblue)",
-          }}
+          className="p-10 w-[50%] ms-40 mt-40 mb-20 rounded-xl bg-gradient-to-bl from-[#2df1fe] to-[#094672] text-black"
+          
         >
           <h2 className="text-2xl font-bold mb-5">
             Calculate Your Maintenance Calorie
           </h2>
-          <div className="flex flex-col">
+          <div className="flex flex-col text-black">
             <label htmlFor="age" className="mb-2">
               Age:
             </label>
@@ -347,7 +341,7 @@ export default function Home() {
               id="age"
               name="age"
               value={age}
-              className="p-2 mb-4 input-border"
+              className="p-2 mb-4 input-border placeholder:text-red-500"
               onChange={(e) => setAge(e.target.value)}
             />
 
@@ -355,12 +349,13 @@ export default function Home() {
               Height : <span>{`${height} cm`}</span>
             </label>
             <input
-              type="range"
+              type="number"
               id="height"
               name="height"
               min="50"
               max="300"
-              className=""
+              value={height}
+              className="p-2 mb-4 input-border"
               style={{ width: "100%" }}
               onChange={(e) => setHeight(e.target.value)}
             />
@@ -421,10 +416,10 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <h1 className="text-black text-5xl font-bold ms-32 mb-10">
+        <h1 className="text-5xl font-bold ms-32 mb-10">
           What we Promise?
         </h1>
-        <div className="text-black flex flex-row items-center">
+        <div className=" flex flex-row items-center">
           <Image
             src="/resturant.png"
             height={300}
@@ -558,7 +553,6 @@ export default function Home() {
           width: auto;
           padding: 16px;
           margin-top: -22px;
-          color: black;
           font-weight: bold;
           font-size: 18px;
           transition: 0.6s ease;
@@ -577,7 +571,6 @@ export default function Home() {
         }
 
         .text {
-          color: black;
           font-size: 40px;
           padding: 8px 12px;
           width: 100%;

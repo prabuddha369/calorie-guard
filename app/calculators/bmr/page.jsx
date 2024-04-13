@@ -21,18 +21,15 @@ const page = () => {
     setCalculatedValue(BMR);
   };
   return (
-    <div className="pt-10 w-[100%] flex flex-col items-center justify-center gap-10">
+    <div className="pt-10 w-[100%] flex flex-col items-center justify-center gap-10 bg-gradient-to-br from-[#17191B] to-[#353A40]">
         <section
-          className="p-10 w-[90%] md:w-[25%] rounded-xl text-black"
-          style={{
-            boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
-            background: "linear-gradient(to bottom, transparent, skyblue)",
-          }}
+          className="p-10 w-[90%] md:w-[25%] rounded-xl text-black bg-gradient-to-bl from-[#2df1fe] to-[#094672]"
+          
         >
           <h2 className="text-2xl font-bold mb-5">
             Calculate Your Basal Metabolic Rate
           </h2>
-          <div className="flex flex-col">
+          <div className="flex flex-col text-black">
             <label htmlFor="age" className="mb-2">
               Age:
             </label>

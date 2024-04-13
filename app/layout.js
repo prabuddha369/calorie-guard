@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css"
         rel="stylesheet"
       />
-      <body className={actor.className}>
+      <body className={`${actor.className}  text-[#F4F7FD]`}>
         <Header />
         {children}
       </body>

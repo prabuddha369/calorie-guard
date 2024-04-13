@@ -68,7 +68,7 @@
 
   @layer base {
     * {
-      @apply border-border;
+      @apply border-border text-[#F4F7FD] ;
     }
     body {
       @apply bg-background text-foreground;
@@ -80,5 +80,10 @@
     margin-right: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    color: #333;
     transition: background-color 0.3s;
+  }
+
+  input{
+    @apply placeholder:text-[#000]
   }
