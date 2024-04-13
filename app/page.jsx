@@ -617,7 +617,7 @@ export default function Home() {
       `}</style>
     </main>
   ) : (
-    <main className="h-full w-screen bg-cover bg-center bg-white overflow-hidden relative">
+    <main className="h-full w-screen bg-cover bg-center bg-gradient-to-br from-[#17191B] to-[#353A40] overflow-hidden relative">
       <div
         className="absolute right-64 transform translate-x-full"
         style={{
@@ -629,7 +629,7 @@ export default function Home() {
           alt="Healthy food"
           width={600}
           height={600}
-          className="rounded-full spin-image"
+          className="rounded-full spin-image overflow-hidden"
           style={{
             boxShadow: "5px 5px 5px 0px rgba(0, 0, 0, 0.75)",
             animation: "spin 10s infinite linear",
@@ -638,8 +638,7 @@ export default function Home() {
       </div>
       <div className="scrollable-container">
         <blockquote
-          className="relative quote w-[70%] h-fit ms-[7%] mt-20 bg-[#CFEDFB70] rounded-xl"
-          style={{ boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)" }}
+          className="relative quote w-[70%] h-fit ms-[7%] mt-20 bg-gradient-to-bl from-[#2df1fe]/80 to-[#094672]/80 rounded-xl shadow-md"
         >
           <ImQuotesLeft size={30} />
           <p className="p-5 ps-14">
@@ -666,11 +665,11 @@ export default function Home() {
         ></div>
 
         <div className="relative">
-          <div className="absolute top-0 text-black w-[80%] bg-white ms-10 mt-5 flex flex-row justify-between items-center border rounded-xl">
+          <div className="absolute top-0 text-black w-[80%] bg-gradient-to-bl from-[#2df1fe]/70 to-[#094672]/70 ms-10 mt-5 flex flex-row justify-between items-center  rounded-xl">
             <Link href="upi://pay?pa=arghyadipbiswas9259@sbi&pn=Arghyadip%20Biswas&cu=INR"
               className="ms-10 text-center">
               <div
-                className="bg-orange-700 text-white p-5"
+                className="bg-orange-700 text-white p-5 rounded-md"
               // onClick={handleDivClick}
               >
                 DONATE NOW
@@ -745,10 +744,10 @@ export default function Home() {
 
         <div className="relative mx-12">
           <div
-            className="h-[260px] w-full bg-[#FFFFFF99] text-white absolute top-[30vh] rounded-3xl pt-5"
+            className="h-[260px] w-full bg-gradient-to-br from-[#17191B]/80 to-[#353A40]/80 text-white absolute top-[30vh] rounded-3xl pt-5"
             style={{ boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)" }}
           >
-            <div className="slideshow-container text-black">
+            <div className="slideshow-container ">
               <div className="mySlides fade">
                 <div className="text font-bold">What we do?</div>
                 <div className="w-full flex justify-center">
@@ -810,13 +809,13 @@ export default function Home() {
 
         <div className="relative px-5">
           <section
-            className="absolute top-[55vh] p-10 w-[90%] mt-40 mb-20 rounded-xl text-black bg-[#97CD9980]"
+            className="absolute top-[55vh] p-10 w-[90%] mt-40 mb-20 rounded-xl text-black bg-gradient-to-bl from-[#2df1fe]/70 to-[#094672]/70"
             style={{ boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)" }}
           >
             <h2 className="text-2xl font-bold mb-5">
               Calculate Your Maintenance Calorie
             </h2>
-            <div className="flex flex-col">
+            <div className="flex flex-col text-black">
               <label htmlFor="age" className="mb-2">
                 Age:
               </label>
@@ -833,12 +832,13 @@ export default function Home() {
                 Height : <span>{`${height} cm`}</span>
               </label>
               <input
-                type="range"
+                type="number"
                 id="height"
                 name="height"
                 min="50"
                 max="300"
-                className=""
+                className="p-2 mb-4 input-border"
+                value={height}
                 style={{ width: "100%" }}
                 onChange={(e) => setHeight(e.target.value)}
               />
@@ -905,11 +905,11 @@ export default function Home() {
               </a>
             </div>
           </section>
-          <div className="absolute top-[220vh]">
-            <h1 className="text-black text-5xl font-bold pb-10">
+          <div className="absolute top-[220vh] bg-gradient-to-br from-[#17191B]/70 to-[#353A40]/70 p-4 rounded-3xl">
+            <h1 className="  text-5xl font-bold pb-10 ">
               What we Promise?
             </h1>
-            <div className="text-black flex flex-row items-center bg-[#FFFFFF90] rounded-t-3xl">
+            <div className="text-black flex flex-row items-center  rounded-t-3xl">
               <Image
                 src="/resturant.png"
                 height={300}
@@ -926,7 +926,7 @@ export default function Home() {
 
               </h2>
             </div>
-            <div className="text-black flex flex-row items-center pt-10 bg-[#FFFFFF90]">
+            <div className="text-black flex flex-row items-center pt-10 ">
               <h2 className="text-2xl ms-2 font-bold me-5">
                 Scan your Foods
                 <br />
@@ -970,6 +970,12 @@ export default function Home() {
         .scrollable-container {
           height: 100vh; /* Set the maximum height as needed */
           overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
+          overflow-x: hidden;
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+        }
+        .scrollable-container::-webkit-scrollbar {
+          display: none;
         }
 
         @keyframes glide {
@@ -1055,7 +1061,6 @@ export default function Home() {
         }
 
         .text {
-          color: black;
           font-size: 20px;
           padding: 8px 12px;
           width: 100%;
