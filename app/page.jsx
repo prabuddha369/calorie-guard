@@ -240,13 +240,13 @@ export default function Home() {
     <main className="h-screen w-full bg-cover bg-center bg-gradient-to-br from-[#17191B] to-[#353A40] overflow-hidden relative ">
       <div className="scrollable-container w-full">
         <div
-          className="absolute right-64 transform translate-x-full"
+          className="absolute right-80 top-10 transform translate-x-full"
           style={{
-            width: "400px",
+            width: "800px",
           }}
         >
           <Image
-            src="/image1.png"
+            src="/plate.png"
             alt="Healthy food"
             width={600}
             height={600}
@@ -258,12 +258,12 @@ export default function Home() {
           />
         </div>
         <blockquote className="relative quote w-[70%] h-fit ms-[7%] mt-20 bg-gradient-to-bl from-[#2df1fe] to-[#094672] ">
-          <ImQuotesLeft size={30} />
-          <p className="p-5 ps-14">
+          <ImQuotesLeft size={30} className="invert" />
+          <p className="p-5 ps-14 text-black">
             The dream that everyone seeks - A life without medicine. The world
             will be a better place if that happens!
           </p>
-          <ImQuotesRight size={30} className="absolute right-5 bottom-5" />
+          <ImQuotesRight size={30} className="absolute right-5 bottom-5 invert" />
         </blockquote>
         <div className="w-screen flex justify-center">
           <Image src="/down.gif" height={60} width={60} className="me-40 invert mt-6" />
@@ -619,13 +619,13 @@ export default function Home() {
   ) : (
     <main className="h-full w-screen bg-cover bg-center bg-gradient-to-br from-[#17191B] to-[#353A40] overflow-hidden relative">
       <div
-        className="absolute right-64 transform translate-x-full"
+        className="absolute right-60 top-10 transform translate-x-full"
         style={{
           width: "400px",
         }}
       >
         <Image
-          src="/image1.png"
+          src="/plate.png"
           alt="Healthy food"
           width={600}
           height={600}
@@ -640,15 +640,15 @@ export default function Home() {
         <blockquote
           className="relative quote w-[70%] h-fit ms-[7%] mt-20 bg-gradient-to-bl from-[#2df1fe]/80 to-[#094672]/80 rounded-xl shadow-md"
         >
-          <ImQuotesLeft size={30} />
-          <p className="p-5 ps-14">
-            The dream that everyone seeks – A life without medicine. The world
+          <ImQuotesLeft size={30} className="invert" />
+          <p className="p-5 ps-14 text-[#000] text-xl">
+            The dream that everyone seeks - A life without medicine. The world
             will be a better place if that happens!
           </p>
-          <ImQuotesRight size={30} className="absolute right-5 bottom-5" />
+          <ImQuotesRight size={30} className="absolute right-5 bottom-5 invert" />
         </blockquote>
-        <div className="w-screen flex justify-center">
-          <Image src="/down.gif" height={60} width={60} className="me-40" />
+        <div className="w-screen flex justify-center py-2">
+          <Image src="/down.gif" height={60} width={60} className="me-20 invert" />
         </div>
 
         <div
@@ -807,7 +807,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative px-5">
+        <div className="relative flex items-center justify-center">
           <section
             className="absolute top-[55vh] p-10 w-[90%] mt-40 mb-20 rounded-xl text-black bg-gradient-to-bl from-[#2df1fe]/70 to-[#094672]/70"
             style={{ boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)" }}
