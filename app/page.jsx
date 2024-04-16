@@ -497,7 +497,7 @@ export default function Home() {
           }}
         />
       </div>
-      <div className="scrollable-container">
+      <div className="scrollable-container p-5">
         <blockquote
           className="relative quote w-[70%] h-fit ms-[7%] mt-20 bg-gradient-to-bl from-[#2df1fe]/80 to-[#094672]/80 rounded-xl shadow-md"
         >
@@ -602,8 +602,9 @@ export default function Home() {
             )}
           </div>
         </div>
+        <div className="relative flex flex-col w-full justify-center items-center mt-80 bg-gradient-to-br from-[#17191B]/70 to-[#353A40]/70 mb-10 rounded-xl p-5 gap-10">
 
-        <section className="relative w-full flex flex-col justify-center place-items-center pt-80">
+        <section className=" flex flex-col w-full justify-center items-center ">
           <h1 className="text-[60px] text-[#2df1fe]">1</h1>
           <p className="text-[40px]">What we do?</p>
           <p className="w-80 text-[15px] text-center text-[#d3d3d3] mt-5">
@@ -612,7 +613,7 @@ export default function Home() {
           <Image src="/wwd.jpg" width={300} height={300} className="rounded-3xl mt-5" />
         </section>
 
-        <section className="relative w-full flex flex-col justify-center place-items-center pt-20">
+        <section className=" flex flex-col w-full justify-center items-center ">
           <h1 className="text-[60px] text-[#2df1fe]">2</h1>
           <p className="text-[40px]">How we do?</p>
           <p className="w-80 text-[15px] text-center text-[#d3d3d3] mt-5">
@@ -622,7 +623,7 @@ export default function Home() {
           <Image src="/hwd.jpg" width={300} height={300} className="rounded-3xl mt-5" />
         </section>
 
-        <section className="relative w-full flex flex-col justify-center place-items-center pt-20">
+        <section className=" flex flex-col w-full justify-center items-center ">
           <h1 className="text-[60px] text-[#2df1fe]">3</h1>
           <p className="text-[40px]">How it works?</p>
           <p className="w-80 text-[15px] text-center text-[#d3d3d3] mt-5">
@@ -632,6 +633,7 @@ export default function Home() {
           </p>
           <Image src="/hiw.jpg" width={300} height={300} className="rounded-3xl mt-5" />
         </section>
+        </div>
 
         <div className="relative flex items-center justify-center">
           <section
