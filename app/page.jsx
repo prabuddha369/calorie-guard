@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
-import {calculateBmr} from "./utils"
+import { calculateBmr } from "./utils"
 import { useEffect, useState } from "react";
 import { ImQuotesLeft } from "react-icons/im";
 import { ImQuotesRight } from "react-icons/im";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { Rajdhani } from "next/font/google";
+import { EB_Garamond } from "next/font/google";
 import {
   Tooltip,
   TooltipContent,
@@ -29,6 +30,7 @@ import {
 import Link from "next/link";
 import { frameworks } from "../constants";
 const rajdhani = Rajdhani({ subsets: ["latin"], weight: ["500"] });
+const garamond = EB_Garamond({ subsets: ["latin"], weight: ["500"] });
 
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -45,7 +47,6 @@ export default function Home() {
     };
   }, []);
 
-  const [animationClass, setAnimationClass] = useState("");
   const [age, setAge] = useState(20);
   const [height, setHeight] = useState(160);
   const [weight, setWeight] = useState(60);
@@ -60,53 +61,6 @@ export default function Home() {
     downloadLink.click();
   };
 
-  const [slideIndex, setSlideIndex] = useState(1);
-
-  useEffect(() => {
-    showSlides(slideIndex);
-  }, [slideIndex, animationClass, windowWidth]);
-
-  const plusSlides = (n) => {
-    setSlideIndex((prevIndex) => {
-      let newIndex = prevIndex + n;
-
-      // Loop to the first slide if reached the end
-      if (newIndex > 3) {
-        newIndex = 1;
-      }
-
-      // Loop to the last slide if reached the beginning
-      if (newIndex < 1) {
-        newIndex = 3;
-      }
-
-      return newIndex;
-    });
-  };
-
-  const currentSlide = (n) => {
-    setSlideIndex(n);
-  };
-
-  const showSlides = (n) => {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {
-      setSlideIndex(1);
-    }
-    if (n < 1) {
-      setSlideIndex(slides.length);
-    }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-  };
 
   const [isDivOpen, setIsDivOpen] = useState(false);
   const [countdown, setCountdown] = useState(300); // 300 seconds = 5 minutes
@@ -257,9 +211,9 @@ export default function Home() {
             }}
           />
         </div>
-        <blockquote className="relative quote w-[70%] h-fit ms-[7%] mt-20 bg-gradient-to-bl from-[#2df1fe] to-[#094672] ">
+        <blockquote className="relative text-[2.2rem] p-8 text-center rounded-xl w-[70%] h-fit ms-[7%] mt-20 bg-gradient-to-bl from-[#2df1fe] to-[#094672]">
           <ImQuotesLeft size={30} className="invert" />
-          <p className="p-5 ps-14 text-black">
+          <p className={`p-5 ps-14 text-black ${garamond.className}`}>
             The dream that everyone seeks - A life without medicine. The world
             will be a better place if that happens!
           </p>
@@ -268,68 +222,55 @@ export default function Home() {
         <div className="w-screen flex justify-center">
           <Image src="/down.gif" height={60} width={60} className="me-40 invert mt-6" />
         </div>
-        <div
-          className="relative ms-20 mt-20 h-[60vh] w-[70%]  text-white rounded-3xl p-10"
-          style={{ boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)" }}
-        >
-          <div className="slideshow-container">
-            <div className="mySlides fade">
-              <div className="text">What we do?</div>
-              <div className="w-full flex justify-center">
-                <div className="w-80 text-xl text-center">
-                  We help everyone to become fit and healthy and build their
-                  dream body type. 💪🌿✨
-                </div>
-              </div>
-            </div>
 
-            <div className="mySlides fade">
-              <div className="text">How we do it?</div>
-              <div className="w-full flex justify-center">
-                <div className="w-80 text-xl text-center">
-                  We provide the most efficient & accurate way to track down
-                  calories of any food. 📊🍽️💡
-                </div>
-              </div>
-            </div>
-
-            <div className="mySlides fade">
-              <div className="text">How it works?</div>
-              <div className="w-full flex justify-center">
-                <div className="w-80 text-xl text-center">
-                  Know about your maintenance calories via our maintenance
-                  calorie calculator. 🧮✨ Track your daily calories through our
-                  food tracker. It's that simple! 📊🍽️{" "}
-                </div>
-              </div>
-            </div>
-
-            <a className="prev" onClick={() => plusSlides(-1)}>
-              ❮
-            </a>
-            <a className="next" onClick={() => plusSlides(1)}>
-              ❯
-            </a>
-
-            <div style={{ textAlign: "center" }} className="pt-10">
-              <span className="dot" onClick={() => currentSlide(1)}></span>
-              <span className="dot" onClick={() => currentSlide(2)}></span>
-              <span className="dot" onClick={() => currentSlide(3)}></span>
-            </div>
+        <section className="w-[70%] flex flex-row justify-center place-items-center mt-40">
+          <div className="w-1/2 flex justify-end">
+            <Image src="/wwd.jpg" width={400} height={400} className="rounded-2xl" />
           </div>
-          <a
-            href="/about"
-            className="absolute bottom-5 text-blue-700 text-[10px] flex flex-row gap-2"
-          >
-            <p>Know More </p>
-            <FaExternalLinkAlt size={10} />
-          </a>
-        </div>
+          <div className="flex flex-col justify-start ms-10">
+            <h1 className="text-[80px] text-[#2df1fe]">1</h1>
+            <p className="text-[40px]">What we do?</p>
+            <p className="w-80 text-sm text-[#d3d3d3]">
+            We help everyone to become fit and strong and achieve a healthy lifestyle.
+            </p>
+          </div>
+        </section>
+
+        <section className="w-[70%] flex flex-row justify-center place-items-center">
+          <div className="w-1/2 flex flex-col justify-end place-items-end">
+            <h1 className="text-[80px] text-[#2df1fe]">2</h1>
+            <p className="text-[40px]">How we do?</p>
+            <p className="text-end w-80 text-sm text-[#d3d3d3]">
+              We provide the most efficient & accurate way to track down
+              calories of any food.
+            </p>
+          </div>
+          <div className="flex justify-start ms-10">
+            <Image src="/hwd.jpg" width={400} height={400} className="rounded-2xl" />
+          </div>
+        </section>
+
+        <section className="w-[70%] flex flex-row justify-center place-items-center">
+          <div className="w-1/2 flex justify-end">
+            <Image src="/hiw.jpg" width={400} height={400} className="rounded-2xl" />
+          </div>
+          <div className="flex flex-col justify-start ms-10">
+            <h1 className="text-[80px] text-[#2df1fe]">3</h1>
+            <p className="text-[40px]">How it works?</p>
+            <p className="w-80 text-sm text-[#d3d3d3]">
+              Know about your maintenance calories via our maintenance
+              calorie calculator. Track your daily calories through our advance
+              food tracking technology. It's that simple!
+            </p>
+          </div>
+        </section>
+
+
         <section
           className="p-10 w-[50%] ms-40 mt-40 mb-20 rounded-xl bg-gradient-to-bl from-[#2df1fe] to-[#094672] text-black"
-          
+
         >
-          <h2 className="text-2xl font-bold mb-5">
+          <h2 className="text-2xl text-center font-bold mb-5 text-black">
             Calculate Your Maintenance Calorie
           </h2>
           <div className="flex flex-col text-black">
@@ -404,16 +345,13 @@ export default function Home() {
           <div className="mt-4 text-3xl text-center">
             <strong>Maintenance Calories: </strong> {calculatedValue}
             <strong> cals</strong>
-            <a
-              className="flex flex-row justify-center h-fit items-center text-blue-700 text-[15px]"
+            <Link
+              className="flex flex-row justify-center items-center text-[10px] mt-2"
               href="https://www.google.com/search?q=what+is+maintenance+calories&sca_esv=585419522&rlz=1C1JZAP_enIN870IN870&sxsrf=AM9HkKk_T3MplQdJwjFuAjxPjbRLaSwk7w%3A1701007787177&ei=q1FjZaqnCoWm2roPgJ2HsAU&ved=0ahUKEwjqqKjn6-GCAxUFk1YBHYDOAVYQ4dUDCBA&uact=5&oq=what+is+maintenance+calories&gs_lp=Egxnd3Mtd2l6LXNlcnAiHHdoYXQgaXMgbWFpbnRlbmFuY2UgY2Fsb3JpZXMyChAjGIAEGIoFGCcyBhAAGAcYHjILEAAYgAQYigUYkQIyCxAAGIAEGIoFGJECMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeSI0MUIMDWPwJcAB4ApABAJgB8AGgAdUMqgEFMC42LjK4AQPIAQD4AQHCAgQQABhH4gMEGAAgQeIDBRIBMSBAiAYBkAYI&sclient=gws-wiz-serp"
             >
-              <strong>
-                <br />
-                Know more about Maintenance Calorie
-              </strong>
-              <FaExternalLinkAlt className="mt-8 ms-2" size={15} />
-            </a>
+              <p className="text-center">Know more about Maintenance Calorie</p>
+              <FaExternalLinkAlt className="ms-2" size={10} />
+            </Link>
           </div>
         </section>
         <h1 className="text-5xl font-bold ms-32 mb-10 hidden">
@@ -529,54 +467,6 @@ export default function Home() {
           transition: background-color 0.3s;
         }
 
-        .quote {
-          border: 2px solid #333; /* Dark grey border */
-          border-radius: 10px; /* Rounded corners */
-          padding: 20px;
-          font-size: 2.2rem; /* Adjust the font size as needed */
-          font-family: "Arial", sans-serif; /* Use a suitable font-family */
-          color: #333; /* Dark grey text color */
-          animation: fadeInDown 1s ease-out;
-        }
-
-        .slideshow-container {
-          max-width: 1000px;
-          position: relative;
-          margin: auto;
-        }
-
-        .prev,
-        .next {
-          cursor: pointer;
-          position: absolute;
-          top: 50%;
-          width: auto;
-          padding: 16px;
-          margin-top: -22px;
-          font-weight: bold;
-          font-size: 18px;
-          transition: 0.6s ease;
-          border-radius: 0 3px 3px 0;
-          user-select: none;
-        }
-
-        .next {
-          right: 0;
-          border-radius: 3px 0 0 3px;
-        }
-
-        .prev:hover,
-        .next:hover {
-          background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .text {
-          font-size: 40px;
-          padding: 8px 12px;
-          width: 100%;
-          text-align: center;
-        }
-
         .numbertext {
           color: #f2f2f2;
           font-size: 12px;
@@ -585,35 +475,6 @@ export default function Home() {
           top: 0;
         }
 
-        .dot {
-          cursor: pointer;
-          height: 15px;
-          width: 15px;
-          margin: 0 2px;
-          background-color: #bbb;
-          border-radius: 50%;
-          display: inline-block;
-          transition: background-color 0.6s ease;
-        }
-
-        .active,
-        .dot:hover {
-          background-color: #717171;
-        }
-
-        .fade {
-          animation-name: fade;
-          animation-duration: 1.5s;
-        }
-
-        @keyframes fade {
-          from {
-            opacity: 0.4;
-          }
-          to {
-            opacity: 1;
-          }
-        }
       `}</style>
     </main>
   ) : (
@@ -636,12 +497,12 @@ export default function Home() {
           }}
         />
       </div>
-      <div className="scrollable-container">
+      <div className="scrollable-container p-5">
         <blockquote
           className="relative quote w-[70%] h-fit ms-[7%] mt-20 bg-gradient-to-bl from-[#2df1fe]/80 to-[#094672]/80 rounded-xl shadow-md"
         >
           <ImQuotesLeft size={30} className="invert" />
-          <p className="p-5 ps-14 text-[#000] text-xl">
+          <p className={`p-5 ps-14 text-black text-xl ${garamond.className}`}>
             The dream that everyone seeks - A life without medicine. The world
             will be a better place if that happens!
           </p>
@@ -741,78 +602,45 @@ export default function Home() {
             )}
           </div>
         </div>
+        <div className="relative flex flex-col w-full justify-center items-center mt-80 bg-gradient-to-br from-[#17191B]/70 to-[#353A40]/70 mb-10 rounded-xl p-5 gap-10">
 
-        <div className="relative mx-12">
-          <div
-            className="h-[260px] w-full bg-gradient-to-br from-[#17191B]/80 to-[#353A40]/80 text-white absolute top-[30vh] rounded-3xl pt-5"
-            style={{ boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)" }}
-          >
-            <div className="slideshow-container ">
-              <div className="mySlides fade">
-                <div className="text font-bold">What we do?</div>
-                <div className="w-full flex justify-center">
-                  <div
-                    className={`w-[60%] text-[18px] text-center ${rajdhani.className}`}
-                  >
-                    We help everyone to become fit and healthy and build their
-                    dream body type. 💪🌿✨
-                  </div>
-                </div>
-              </div>
+        <section className=" flex flex-col w-full justify-center items-center ">
+          <h1 className="text-[60px] text-[#2df1fe]">1</h1>
+          <p className="text-[40px]">What we do?</p>
+          <p className="w-80 text-[15px] text-center text-[#d3d3d3] mt-5">
+            We help everyone to become fit and strong and achieve a healthy lifestyle.
+          </p>
+          <Image src="/wwd.jpg" width={300} height={300} className="rounded-3xl mt-5" />
+        </section>
 
-              <div className="mySlides fade">
-                <div className="text font-bold">How we do it?</div>
-                <div className="w-full flex justify-center">
-                  <div
-                    className={`w-[60%] text-[18px] text-center ${rajdhani.className}`}
-                  >
-                    We provide the most efficient & accurate way to track down
-                    calories of any food. 📊🚀💡
-                  </div>
-                </div>
-              </div>
+        <section className=" flex flex-col w-full justify-center items-center ">
+          <h1 className="text-[60px] text-[#2df1fe]">2</h1>
+          <p className="text-[40px]">How we do?</p>
+          <p className="w-80 text-[15px] text-center text-[#d3d3d3] mt-5">
+            We provide the most efficient & accurate way to track down
+            calories of any food.
+          </p>
+          <Image src="/hwd.jpg" width={300} height={300} className="rounded-3xl mt-5" />
+        </section>
 
-              <div className="mySlides fade">
-                <div className="text font-bold">How it works?</div>
-                <div className="w-full flex justify-center">
-                  <div
-                    className={`w-[60%] text-[17px] text-center ${rajdhani.className}`}
-                  >
-                    Know about your daily required calories via our calorie
-                    calculator and food tracker.It's that simple!⚙️{" "}
-                  </div>
-                </div>
-              </div>
-
-              <a className="prev" onClick={() => plusSlides(-1)}>
-                ❮
-              </a>
-              <a className="next" onClick={() => plusSlides(1)}>
-                ❯
-              </a>
-
-              <div style={{ textAlign: "center" }} className="pt-5">
-                <span className="dot" onClick={() => currentSlide(1)}></span>
-                <span className="dot" onClick={() => currentSlide(2)}></span>
-                <span className="dot" onClick={() => currentSlide(3)}></span>
-              </div>
-            </div>
-            <a
-              href="/about"
-              className="absolute bottom-5 left-10  text-blue-700 text-[10px] flex flex-row gap-2"
-            >
-              <p>Know More </p>
-              <FaExternalLinkAlt size={10} />
-            </a>
-          </div>
+        <section className=" flex flex-col w-full justify-center items-center ">
+          <h1 className="text-[60px] text-[#2df1fe]">3</h1>
+          <p className="text-[40px]">How it works?</p>
+          <p className="w-80 text-[15px] text-center text-[#d3d3d3] mt-5">
+            Know about your maintenance calories via our maintenance
+            calorie calculator. Track your daily calorie and macros through our advance
+            food tracking technology. It's that simple!
+          </p>
+          <Image src="/hiw.jpg" width={300} height={300} className="rounded-3xl mt-5" />
+        </section>
         </div>
 
         <div className="relative flex items-center justify-center">
           <section
-            className="absolute top-[55vh] p-10 w-[90%] mt-40 mb-20 rounded-xl text-black bg-gradient-to-bl from-[#2df1fe]/70 to-[#094672]/70"
+            className="absolute top-[55vh] p-10 w-[90%] mb-20 rounded-xl text-black bg-gradient-to-bl from-[#2df1fe]/70 to-[#094672]/70"
             style={{ boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)" }}
           >
-            <h2 className="text-2xl font-bold mb-5">
+            <h2 className="text-2xl font-bold mb-5 text-center text-black">
               Calculate Your Maintenance Calorie
             </h2>
             <div className="flex flex-col text-black">
@@ -1031,70 +859,6 @@ export default function Home() {
           font-family: "Arial", sans-serif; /* Use a suitable font-family */
           color: #333; /* Dark grey text color */
           animation: fadeInDown 1s ease-out;
-        }
-
-        .slideshow-container {
-          max-width: 1000px;
-          position: relative;
-          margin: auto;
-        }
-
-        .prev,
-        .next {
-          cursor: pointer;
-          position: absolute;
-          top: 50%;
-          width: auto;
-          padding: 16px;
-          margin-top: -22px;
-          color: black;
-          font-weight: bold;
-          font-size: 18px;
-          transition: 0.6s ease;
-          border-radius: 0 3px 3px 0;
-          user-select: none;
-        }
-
-        .next {
-          right: 0;
-          border-radius: 3px 0 0 3px;
-        }
-
-        .text {
-          font-size: 20px;
-          padding: 8px 12px;
-          width: 100%;
-          text-align: center;
-        }
-
-        .dot {
-          cursor: pointer;
-          height: 15px;
-          width: 15px;
-          margin: 0 2px;
-          background-color: #bbb;
-          border-radius: 50%;
-          display: inline-block;
-          transition: background-color 0.6s ease;
-        }
-
-        .active,
-        .dot:hover {
-          background-color: #717171;
-        }
-
-        .fade {
-          animation-name: fade;
-          animation-duration: 1.5s;
-        }
-
-        @keyframes fade {
-          from {
-            opacity: 0.4;
-          }
-          to {
-            opacity: 1;
-          }
         }
       `}</style>
     </main>
