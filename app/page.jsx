@@ -416,10 +416,10 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <h1 className="text-5xl font-bold ms-32 mb-10">
+        <h1 className="text-5xl font-bold ms-32 mb-10 hidden">
           What we Promise?
         </h1>
-        <div className=" flex flex-row items-center">
+        <div className=" flex flex-row items-center hidden">
           <Image
             src="/resturant.png"
             height={300}
@@ -439,7 +439,7 @@ export default function Home() {
             <br />
           </h2>
         </div>
-        <div className="text-black flex flex-row items-center mt-10">
+        <div className="text-black flex flex-row items-center mt-10 hidden">
           <h2 className="ms-32 text-3xl font-bold me-5">
             Scan your Foods
             <br />
@@ -905,11 +905,11 @@ export default function Home() {
               </a>
             </div>
           </section>
-          <div className="absolute top-[220vh] bg-gradient-to-br from-[#17191B]/70 to-[#353A40]/70 p-4 rounded-3xl">
-            <h1 className="  text-5xl font-bold pb-10 ">
+          <div className="absolute top-[220vh] bg-gradient-to-br from-[#17191B]/70 to-[#353A40]/70 p-4 rounded-3xl w-full">
+            <h1 className="  text-5xl font-bold pb-10  hidden">
               What we Promise?
             </h1>
-            <div className="text-black flex flex-row items-center  rounded-t-3xl">
+            <div className="text-black flex flex-row items-center  rounded-t-3xl hidden">
               <Image
                 src="/resturant.png"
                 height={300}
@@ -926,7 +926,7 @@ export default function Home() {
 
               </h2>
             </div>
-            <div className="text-black flex flex-row items-center pt-10 ">
+            <div className="text-black flex flex-row items-center pt-10  hidden">
               <h2 className="text-2xl ms-2 font-bold me-5">
                 Scan your Foods
                 <br />
